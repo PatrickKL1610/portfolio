@@ -1,0 +1,25 @@
+@import "../../assets/colors.scss";
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 37px 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $primbackground;
+  img {
+    width: 150px;
+    height: auto;
+  }
+}
+
+.navbar-links {
+  a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+  }
+}
