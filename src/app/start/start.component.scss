@@ -23,20 +23,23 @@
   }
 }
 
+.textbox_position {
+  display: flex;
+  justify-content: center;
+}
+
 .textbox {
   display: flex;
   position: absolute;
-  top: 297px;
-  left: 40vw;
+  top: 280px;
   .iamcontainer {
     display: flex;
     justify-content: center;
     align-items: center;
     .iam_box {
       rotate: -90deg;
-      font-family: Poppins400;
       color: white;
-      font-size: 64px;
+      font-size: 74px;
       line-height: 76.8px;
     }
   }
@@ -44,19 +47,36 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     .name {
       font-family: Poppins700;
       color: white;
-      font-size: 90px;
+      font-size: 128px;
       line-height: 108px;
     }
 
     .developer {
       font-family: Poppins400;
       color: $specpurple;
-      font-size: 58px;
+      font-size: 64px;
       line-height: 69.6px;
     }
   }
+}
+
+.shadows {
+  position: relative;
+  width: 100vw;
+  height: 938.61px;
+  overflow: hidden;
+}
+.shadow_purple {
+  position: absolute;
+  top: 130px;
+  left: -250px;
+}
+
+.shadow_blue {
+  position: absolute;
+  top: 100px;
+  right: -450px;
 }
