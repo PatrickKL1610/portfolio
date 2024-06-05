@@ -1,0 +1,62 @@
+@import "../../assets/colors.scss";
+
+.start-screen {
+  background-color: $darkblueBG;
+  height: 100vh;
+  width: 100vw;
+}
+
+.photobox {
+  .profile_image {
+    width: auto;
+    height: 75vh;
+    position: absolute;
+    top: 106px;
+    left: 47px;
+  }
+  .profile_bckg {
+    height: 75vh;
+    width: auto;
+    position: absolute;
+    top: 166px;
+    left: 12px;
+  }
+}
+
+.textbox {
+  display: flex;
+  position: absolute;
+  top: 297px;
+  left: 40vw;
+  .iamcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .iam_box {
+      rotate: -90deg;
+      font-family: Poppins400;
+      color: white;
+      font-size: 64px;
+      line-height: 76.8px;
+    }
+  }
+  .textcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .name {
+      font-family: Poppins700;
+      color: white;
+      font-size: 90px;
+      line-height: 108px;
+    }
+
+    .developer {
+      font-family: Poppins400;
+      color: $specpurple;
+      font-size: 58px;
+      line-height: 69.6px;
+    }
+  }
+}

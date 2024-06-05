@@ -9,7 +9,8 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: $primbackground;
+  background-color: $darkblueBG;
+  z-index: 9999;
   img {
     width: 150px;
     height: auto;
