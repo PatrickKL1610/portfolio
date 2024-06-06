@@ -31,7 +31,8 @@
 .textbox {
   display: flex;
   position: absolute;
-  top: 280px;
+  top: 297px;
+  z-index: 999;
   .iamcontainer {
     display: flex;
     justify-content: center;
@@ -66,17 +67,32 @@
 .shadows {
   position: relative;
   width: 100vw;
-  height: 938.61px;
+  height: 100vh;
   overflow: hidden;
 }
 .shadow_purple {
   position: absolute;
-  top: 130px;
-  left: -250px;
+  left: -500px;
 }
 
 .shadow_blue {
   position: absolute;
-  top: 100px;
-  right: -450px;
+  right: -550px;
+}
+
+.button {
+  position: absolute;
+  top: 593px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  button {
+    width: 165px;
+    height: 58px;
+    border-radius: 10px;
+    gap: 10px;
+    font-size: 23px;
+    background-color: $specgreen;
+    color: white;
+  }
 }
