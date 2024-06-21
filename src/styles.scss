@@ -13,7 +13,8 @@
   src: url(assets/fonts/Poppins/Poppins-Bold.ttf);
 }
 
-* {
+body {
   margin: 0;
   font-family: Poppins;
+  overflow-x: hidden;
 }
