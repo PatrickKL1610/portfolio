@@ -45,7 +45,7 @@ section {
   display: flex;
   flex-direction: row;
   position: relative;
-  right: 10%;
+  right: 25%;
 }
 .aboutme {
   display: flex;
@@ -59,14 +59,14 @@ section {
   height: 800px;
   display: flex;
   position: relative;
-  left: 450px;
+  left: 700px;
 }
 .profilepic {
   width: 1200px;
   height: 800px;
   display: flex;
   position: relative;
-  left: -800px;
+  left: -350px;
   bottom: -10px;
 }
 .vector {
@@ -107,7 +107,7 @@ section {
     height: 800px;
     display: flex;
     position: relative;
-    left: 300px;
+    left: 400px;
   }
 }
 @media (max-width: 1500px) {
@@ -139,7 +139,7 @@ section {
     bottom: 50px;
   }
   .profileImageContainer {
-    right: 27%;
+    right: 45%;
   }
   .anchorpointaboutme {
     top: -120px;
@@ -147,7 +147,7 @@ section {
 }
 @media (max-width: 1050px) {
   .profileImageContainer {
-    right: 36%;
+    right: 50%;
   }
   .anchorpointaboutme {
     top: -100px;
@@ -163,7 +163,7 @@ section {
 }
 @media (max-width: 950px) {
   .profileImageContainer {
-    right: 34%;
+    right: 50%;
   }
   .aboutme,
   .aboutme .infoBulb,
@@ -175,7 +175,7 @@ section {
   .profileImageContainer {
     transform: scale(0.75);
     bottom: -30px;
-    right: 43%;
+    right: 60%;
   }
   .anchorpointaboutme {
     top: -60px;
@@ -187,7 +187,7 @@ section {
 }
 @media (max-width: 850px) {
   .profileImageContainer {
-    right: 45%;
+    right: 65%;
   }
 }
 @media (max-width: 800px) {
@@ -197,7 +197,7 @@ section {
   }
   .profileImageContainer {
     transform: scale(0.7);
-    right: 51%;
+    right: 70%;
     bottom: -45px;
   }
   .infoBulb,
@@ -208,7 +208,7 @@ section {
 }
 @media (max-width: 750px) {
   .profileImageContainer {
-    right: 54%;
+    right: 75%;
   }
 }
 @media (max-width: 700px) {
@@ -307,7 +307,7 @@ section {
     display: flex;
     position: relative;
     top: -60px;
-    left: 500px;
+    left: 200px;
   }
 }
 @media (max-width: 550px) {
