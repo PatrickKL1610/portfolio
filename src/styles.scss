@@ -19,3 +19,26 @@ body {
   overflow-x: hidden;
   background-color: rgb(20, 29, 47);
 }
+
+app-skills {
+  position: relative;
+  top: -400px;
+}
+
+@media (max-width: 1400px) {
+  app-skills {
+    top: -150px;
+  }
+}
+@media (max-width: 700px) {
+  app-skills {
+    position: relative;
+    top: 0;
+  }
+}
+@media (max-width: 350px) {
+  app-skills {
+    position: relative;
+    top: 40px;
+  }
+}
