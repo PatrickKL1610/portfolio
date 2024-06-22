@@ -3,7 +3,7 @@ section {
   display: flex;
   justify-content: center;
 }
-.purple {
+.purpleline {
   width: 20%;
   height: 4px;
   position: relative;
@@ -18,7 +18,7 @@ section {
   max-width: 1920px;
   min-width: 320px;
 }
-.portfolioHeadline {
+.headlinecontainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -27,7 +27,7 @@ section {
   position: relative;
   left: -20px;
 }
-.portfolioHeadline span {
+.headlinecontainer span {
   width: 470px;
   height: 38px;
   display: flex;
@@ -40,7 +40,7 @@ section {
   line-height: 19.2px;
   color: #fff;
 }
-.contactAnchor {
+.anchorpointcontact {
   display: flex;
   position: relative;
   top: 1600px;
@@ -80,7 +80,7 @@ app-project {
   border: 1px solid #70e61c;
   overflow: hidden;
 }
-.portfolioSection {
+.portfoliocontainer {
   display: flex;
   justify-content: center;
   position: relative;
@@ -128,10 +128,10 @@ app-project {
   section {
     height: 1500px;
   }
-  .contactAnchor {
+  .anchorpointcontact {
     top: 1400px;
   }
-  .portfolioSection {
+  .portfoliocontainer {
     transform: scale(0.9);
     top: 300px;
   }
@@ -141,7 +141,7 @@ app-project {
   }
 }
 @media (max-width: 1200px) {
-  .portfolioSection {
+  .portfoliocontainer {
     transform: scale(0.8);
   }
   .greenShadow {
@@ -149,12 +149,12 @@ app-project {
   }
 }
 @media (max-width: 1050px) {
-  .portfolioSection {
+  .portfoliocontainer {
     transform: scale(0.7);
     height: 900px;
     top: 300px;
   }
-  .contactAnchor {
+  .anchorpointcontact {
     top: 1250px;
   }
   section {
@@ -169,12 +169,12 @@ app-project {
   }
 }
 @media (max-width: 900px) {
-  .portfolioSection {
+  .portfoliocontainer {
     transform: scale(0.6);
     height: 850px;
     top: 200px;
   }
-  .contactAnchor {
+  .anchorpointcontact {
     top: 1050px;
   }
   section {
@@ -189,14 +189,14 @@ app-project {
   }
 }
 @media (max-width: 800px) {
-  .portfolioSection {
+  .portfoliocontainer {
     transform: scale(0.55);
     height: 800px;
   }
   section {
     height: 1100px;
   }
-  .contactAnchor {
+  .anchorpointcontact {
     top: 1000px;
   }
   .greenShadow {
@@ -211,19 +211,19 @@ app-project {
   section {
     height: 2000px;
   }
-  .contactAnchor {
+  .anchorpointcontact {
     top: 1950px;
   }
-  .purple {
+  .purpleline {
     top: 104px;
   }
-  .portfolioHeadline {
+  .headlinecontainer {
     transform: scale(1);
     position: relative;
     left: 0;
     margin-top: 100px;
   }
-  .portfolioHeadline span {
+  .headlinecontainer span {
     left: 70px;
     width: 320px;
     top: 50px;
@@ -250,7 +250,7 @@ app-project {
     height: 4px;
     border: 4px;
   }
-  .portfolioSection {
+  .portfoliocontainer {
     transform: scale(1);
     width: 100%;
     height: 100%;
@@ -291,10 +291,10 @@ app-project {
   section {
     height: 1400px;
   }
-  .contactAnchor {
+  .anchorpointcontact {
     top: 1350px;
   }
-  .portfolioSection {
+  .portfoliocontainer {
     top: 200px;
   }
   .blueShadow {
@@ -305,7 +305,7 @@ app-project {
     top: 650px;
     right: -200px;
   }
-  .portfolioHeadline {
+  .headlinecontainer {
     transform: scale(1);
     position: relative;
     left: 0;
@@ -313,7 +313,7 @@ app-project {
   }
 }
 @media (max-width: 480px) {
-  .portfolioHeadline span {
+  .headlinecontainer span {
     width: 295px;
   }
   .greenShadow {
@@ -324,12 +324,12 @@ app-project {
   }
 }
 @media (max-width: 400px) {
-  .portfolioHeadline {
+  .headlinecontainer {
     transform: scale(1);
     position: relative;
     left: 0;
   }
-  .portfolioHeadline span {
+  .headlinecontainer span {
     left: 40px;
     width: 260px;
   }
@@ -350,7 +350,7 @@ app-project {
   }
 }
 @media (max-width: 350px) {
-  .portfolioHeadline span {
+  .headlinecontainer span {
     left: 20px;
   }
   .greenShadow {
@@ -360,7 +360,7 @@ app-project {
   section {
     height: 1200px;
   }
-  .contactAnchor {
+  .anchorpointcontact {
     top: 1150px;
   }
   app-project {
