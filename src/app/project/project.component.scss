@@ -123,15 +123,13 @@ span {
   z-index: 1;
   overflow: hidden;
 }
-.backgroundShadow {
-  background-color: #00000040;
-}
+
 img {
   position: relative;
   height: 603px;
   width: 603px;
 }
-.imgHover {
+.projectHover {
   transform: scaleY(1.85) scaleX(1.5);
   transition: transform 0.5s;
   margin-left: 20px;

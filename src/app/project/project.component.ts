@@ -1,11 +1,16 @@
-import { Component, Input } from '@angular/core';
+import {
+  Component,
+  Input,
+  ElementRef,
+  Renderer2,
+  HostListener,
+} from '@angular/core';
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [],
   templateUrl: './project.component.html',
-  styleUrl: './project.component.scss',
+  styleUrls: ['./project.component.scss'],
 })
 export class ProjectComponent {
   @Input() imagesrc!: string;
@@ -17,4 +22,24 @@ export class ProjectComponent {
   @Input() idproject!: string;
   @Input() idbackground!: string;
   @Input() idimage!: string;
+
+  private imageElement!: ElementRef<HTMLImageElement>;
+  private divElement!: ElementRef<HTMLDivElement>;
+
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
+
+  ngAfterViewInit() {
+    this.imageElement = this.el.nativeElement.querySelector(`#${this.idimage}`);
+    this.divElement = this.el.nativeElement.querySelector(`#${this.idproject}`);
+  }
+
+  @HostListener('mouseenter') onMouseEnter() {
+    this.renderer.addClass(this.imageElement, 'projectHover');
+    this.renderer.removeClass(this.divElement, 'd-none');
+  }
+
+  @HostListener('mouseleave') onMouseLeave() {
+    this.renderer.removeClass(this.imageElement, 'projectHover');
+    this.renderer.addClass(this.divElement, 'd-none');
+  }
 }

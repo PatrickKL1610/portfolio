@@ -1,4 +1,4 @@
-<section>
+<section (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
   <div class="bg_project d-none" id="{{ idproject }}">
     <div class="orientation">
       <h1>{{ projecttitle }}</h1>
@@ -11,5 +11,5 @@
     <button class="testButton liveTest" id="{{ idtest }}">Live test</button>
   </div>
   <div class="background" id="{{ idbackground }}"></div>
-  <img id="{{ idimage }}" src="{{ imagesrc }}" />
+  <img #image id="{{ idimage }}" src="{{ imagesrc }}" />
 </section>
