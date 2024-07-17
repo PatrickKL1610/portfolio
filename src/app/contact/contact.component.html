@@ -1,11 +1,3 @@
-<img
-  class="blue aos-init aos-animate"
-  src="../../assets/img/blueLineContacts.png"
-/>
-<img
-  class="green aos-init aos-animate"
-  src="../../assets/img/greenLineContacts.png"
-/>
 <section>
   <div class="wrapperContact">
     <div data-aos="fade-right" class="headline aos-init aos-animate">
@@ -18,8 +10,8 @@
           <h2>Got a problem to solve?</h2>
         </div>
         <div class="contactText">
-          <span
-            >Contact me through this form, I am interested in hearing you,
+          <span>
+            Contact me through this form, I am interested in hearing you,
             knowing your ideas and contributing to your projects with my work.
           </span>
           <span class="callToAction">
@@ -30,9 +22,11 @@
         </div>
       </div>
       <form
+        (ngSubmit)="onSubmit(contactForm)"
+        #contactForm="ngForm"
         novalidate
         data-aos="fade-left"
-        class="formGab ng-untouched ng-pristine ng-invalid aos-init aos-animate"
+        class="formGab aos-init aos-animate"
       >
         <div class="inputGab">
           <div class="inputBox">
@@ -42,20 +36,26 @@
               id="inputName"
               required
               placeholder="Your name"
-              class="ng-untouched ng-pristine ng-invalid"
+              [(ngModel)]="contactData.name"
+              #name="ngModel"
+              (blur)="name.control.markAsTouched()"
             />
             <img
+              [class.d-none]="!name.invalid || !name.touched"
               id="errorImgName"
-              class="d-none imgPositioning"
+              class="imgPositioning"
               src="../../assets/img/errorSymbol.png"
             />
             <img
+              [class.d-none]="name.invalid || !name.touched"
               id="successImgName"
-              class="d-none imgPositioning"
+              class="imgPositioning"
               src="../../assets/img/successSymbol.png"
             />
           </div>
-          <span id="errorName" class="d-none">Ihr Name wird benötigt</span>
+          <span [class.d-none]="!name.invalid || !name.touched" id="errorName">
+            Ihr Name wird benötigt
+          </span>
         </div>
         <div class="inputGab">
           <div class="inputBox">
@@ -64,23 +64,31 @@
               type="email"
               id="inputMail"
               required
+              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
               placeholder="Your Email"
-              class="ng-untouched ng-pristine ng-invalid"
+              [(ngModel)]="contactData.email"
+              #email="ngModel"
+              (blur)="email.control.markAsTouched()"
             />
             <img
+              [class.d-none]="!email.invalid || !email.touched"
               id="errorImgMail"
-              class="d-none imgPositioning"
+              class="imgPositioning"
               src="../../assets/img/errorSymbol.png"
             />
             <img
+              [class.d-none]="email.invalid || !email.touched"
               id="successImgMail"
-              class="d-none imgPositioning"
+              class="imgPositioning"
               src="../../assets/img/successSymbol.png"
             />
           </div>
-          <span id="errorMail" class="d-none"
-            >Ihre E-Mail wird benötigt (z.B. beispiel&#64; domain.de)</span
+          <span
+            [class.d-none]="!email.invalid || !email.touched"
+            id="errorMail"
           >
+            Ihre E-Mail wird benötigt (z.B. beispiel&#64;domain.de)
+          </span>
         </div>
         <div class="inputGab">
           <div class="inputBox">
@@ -90,28 +98,43 @@
               id="inputText"
               required
               placeholder="Your Message"
-              class="ng-untouched ng-pristine ng-invalid"
+              [(ngModel)]="contactData.message"
+              #message="ngModel"
+              (blur)="message.control.markAsTouched()"
             ></textarea>
             <img
+              [class.d-none]="!message.invalid || !message.touched"
               id="errorImgText"
-              class="d-none imgPositioning"
+              class="imgPositioning"
               src="../../assets/img/errorSymbol.png"
             />
             <img
+              [class.d-none]="message.invalid || !message.touched"
               id="successImgText"
-              class="d-none imgPositioning"
+              class="imgPositioning"
               src="../../assets/img/successSymbol.png"
             />
           </div>
-          <span id="errorText" class="d-none"
-            >Ihre Nachricht ist leer oder hat weniger als 4 Buchstaben</span
+          <span
+            [class.d-none]="!message.invalid || !message.touched"
+            id="errorText"
           >
+            Ihre Nachricht ist leer oder hat weniger als 4 Buchstaben
+          </span>
         </div>
         <div class="inputGab">
-          <div class="privacy">
-            <img src="../../assets/img/checkbox_unchecked.png" />
-            <span
-              >Ich habe die
+          <div
+            class="privacy"
+            (click)="togglePrivacy()"
+            (blur)="privacyTouched = true"
+          >
+            <img
+              [src]="getCheckboxImage()"
+              (mouseover)="onPrivacyHover(true)"
+              (mouseout)="onPrivacyHover(false)"
+            />
+            <span>
+              Ich habe die
               <a
                 routerlink="/privacy"
                 routerlinkactive="active"
@@ -121,12 +144,29 @@
               gelesen und stimme der Verarbeitung zu.
             </span>
           </div>
-          <span id="errorPrivacy" class="d-none"
-            >Bitte akzeptieren Sie die Datenschutzbestimmung
+          <span
+            [class.d-none]="contactData.privacy || !privacyTouched"
+            id="errorPrivacy"
+          >
+            Bitte akzeptieren Sie die Datenschutzbestimmung
           </span>
         </div>
         <div>
-          <button disabled class="disabledButton">Send</button>
+          <button
+            [disabled]="
+              contactForm.invalid || !contactForm.dirty || !contactData.privacy
+            "
+            [ngClass]="{
+              disabledButton:
+                contactForm.invalid ||
+                !contactForm.dirty ||
+                !contactData.privacy,
+              enabledButton:
+                contactForm.valid && contactForm.dirty && contactData.privacy
+            }"
+          >
+            Send
+          </button>
         </div>
       </form>
     </div>
