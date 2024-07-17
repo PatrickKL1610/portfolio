@@ -10,7 +10,7 @@ section {
   display: flex;
   top: 131px;
 }
-.wrapperPortfolio {
+.portfoliowrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +33,7 @@ section {
   display: flex;
   position: relative;
   top: 0;
-  left: -130px;
+  left: 60px;
   font-family: Poppins;
   font-weight: 400;
   font-size: 16px;
@@ -61,7 +61,7 @@ section {
   gap: 10px;
   z-index: 1;
   background-color: #141d2f;
-  margin-left: -130px;
+  margin-left: 60px;
 }
 .headline img {
   width: 50px;
@@ -214,7 +214,7 @@ app-project {
   .anchorpointcontact {
     top: 1950px;
   }
-  .purpleline {
+  .purple {
     top: 104px;
   }
   .headlinecontainer {
