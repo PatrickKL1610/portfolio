@@ -1,7 +1,7 @@
 <header class="header">
   <div class="navbar-container">
     <div class="logo">
-      <a href="#/" class="active">
+      <a href="" class="active">
         <span>P</span>
         <span>a</span>
         <span>t</span>
@@ -13,25 +13,29 @@
     </div>
 
     <div>
-      <div class="d-none">
+      <div class="headerlinks">
         <a href="#aboutme">About me</a>
         <a href="#myskills">Skills</a>
-        <a href="#mypotfolio">Portfolio</a>
+        <a href="#myportfolio">Portfolio</a>
       </div>
-      <div class="burger d-none">
+      <div class="burger" (click)="toggleBurgerMenu($event)">
         <img src="../../assets/img/burger_menu.png" />
       </div>
     </div>
   </div>
 </header>
 
-<div class="burgerMenu">
+<div
+  class="burgerMenu"
+  [class.show]="isBurgerMenuVisible"
+  (click)="closeBurgerMenu($event)"
+>
   <div class="orientation">
     <div>
-      <a href="#aboutme">About me</a>
-      <a href="#myskills">Skills</a>
-      <a href="#mypotfolio">Portfolio</a>
-      <a href="#mycontact">Contact</a>
+      <a href="#aboutme" (click)="closeBurgerMenu($event)">About me</a>
+      <a href="#myskills" (click)="closeBurgerMenu($event)">Skills</a>
+      <a href="#myportfolio" (click)="closeBurgerMenu($event)">Portfolio</a>
+      <a href="#mycontact" (click)="closeBurgerMenu($event)">Contact</a>
     </div>
   </div>
 </div>

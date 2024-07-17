@@ -66,10 +66,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-.d-none {
-  display: none;
-}
-
 .burger {
   display: none !important;
 }
@@ -108,5 +104,18 @@
     font-weight: 400;
     line-height: 27.6px;
     margin-bottom: 29px;
+  }
+}
+
+.burgerMenu.show {
+  transform: translate(0);
+}
+
+@media (max-width: 600px) {
+  .burger {
+    display: flex !important;
+  }
+  .headerlinks {
+    display: none !important;
   }
 }
