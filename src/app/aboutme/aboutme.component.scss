@@ -96,6 +96,10 @@ section {
 .infoPuzzle img:hover {
   transform: scale(1.2);
 }
+#myskills {
+  position: relative;
+  top: -400px;
+}
 @media (max-width: 1700px) {
   .profileImageContainer {
     right: 10%;
