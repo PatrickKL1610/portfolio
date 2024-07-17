@@ -1,0 +1,729 @@
+section {
+  height: 850px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+.wrapperContact {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1920px;
+  min-width: 320px;
+}
+.blue {
+  width: 20%;
+  height: 4px;
+  position: relative;
+  display: flex;
+  top: 310px;
+}
+.green {
+  width: 44%;
+  height: 5px;
+  position: relative;
+  display: flex;
+  top: 131px;
+  left: 58%;
+  border: 4px;
+  margin-left: 20px;
+}
+.headline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.headline h1 {
+  gap: 10px;
+  color: #fff;
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 108px;
+}
+.headline img {
+  height: 0px;
+  width: 40%;
+  margin-left: 20px;
+  border: 4px;
+}
+.middleSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  margin-right: 100px;
+  margin-left: 40px;
+}
+.d-none {
+  display: none;
+}
+.contactTextbox {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.contactTextbox .contactTextheadline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #141d2f;
+  z-index: 1;
+}
+.contactTextbox .contactTextheadline img {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  height: 4px;
+  border: 4px;
+}
+.contactTextbox h2 {
+  width: 473px;
+  height: 38px;
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.contactTextbox span {
+  display: flex;
+  width: 455px;
+  height: 80px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.contactTextbox .contactText {
+  display: flex;
+  flex-direction: column;
+}
+.contactTextbox .callToAction {
+  width: 473px;
+  height: 38px;
+  gap: 8px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.formGab {
+  gap: 32px;
+}
+.inputGab {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+form {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 617px;
+  height: 504px;
+  z-index: 2;
+}
+form span {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #e61c40;
+}
+form .inputBox {
+  display: flex;
+  width: 760px;
+}
+form .inputBox .imgPositioning {
+  position: relative;
+  right: 40px;
+  top: 16px;
+  height: 25px;
+  width: 25px;
+  padding-right: 16px;
+}
+form input {
+  display: flex;
+  width: 617px;
+  height: 25px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  gap: 10px;
+  background: linear-gradient(0deg, #141d2f, #141d2f),
+    linear-gradient(0deg, #9747ff, #9747ff);
+  border: 1px solid #9747ff;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+form input:hover {
+  cursor: pointer;
+  border: 1px solid #70e61c;
+}
+form ::placeholder {
+  color: #fff;
+}
+form textarea {
+  display: flex;
+  width: 617px;
+  height: 130px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  gap: 10px;
+  background: linear-gradient(0deg, #141d2f, #141d2f),
+    linear-gradient(0deg, #9747ff, #9747ff);
+  border: 1px solid #9747ff;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+form textarea:hover {
+  cursor: pointer;
+  border: 1px solid #70e61c;
+}
+form .privacy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+form .privacy span {
+  width: 617px;
+  gap: 8px;
+  color: #fff;
+}
+form .privacy img {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  padding-top: 4px;
+}
+form .privacy a {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #9747ff;
+  text-decoration: none;
+}
+form button {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: 200px;
+  width: 253px;
+  height: 58px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  gap: 10px;
+  cursor: pointer;
+  background-color: #70e61c !important;
+  background-color: #b6b6b6;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  box-shadow: 4px 4px 4px #00000040;
+  border: none;
+}
+form .disabledButton {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: 200px;
+  width: 253px;
+  height: 58px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  gap: 10px;
+  cursor: pointer;
+  background-color: #b6b6b6 !important;
+  background-color: #b6b6b6;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  box-shadow: 4px 4px 4px #00000040;
+  border: none;
+}
+.buttonHover:hover {
+  background-color: #9747ff !important;
+  border-color: #9747ff !important;
+  transform: scale(1.2);
+}
+.borderGreen {
+  border: 1px solid #70e61c !important;
+}
+.borderRed {
+  border: 1px solid #e61c40 !important;
+}
+.bottomSection {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+  height: 100px;
+}
+.bottomSection .purpleShadow {
+  position: relative;
+  top: -350px;
+  right: 0;
+  z-index: -1;
+  height: 700px;
+  width: 600px;
+}
+.bottomSection .topArrow {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 530px;
+  z-index: 2;
+  width: 39px;
+  height: 39px;
+  padding: 8px 8px 7px 7px;
+  border-radius: 41px;
+  border: 2px;
+}
+.bottomSection .topArrowGreen {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 530px;
+  z-index: 1;
+  width: 39px;
+  height: 39px;
+  padding: 8px 8px 7px 7px;
+  border-radius: 41px;
+  border: 2px;
+}
+@media (max-width: 2350px) {
+  .blue {
+    width: 20%;
+    height: 4px;
+    position: relative;
+    display: flex;
+  }
+}
+@media (max-width: 1300px) {
+  form input,
+  form textarea {
+    width: 75%;
+  }
+  .contactTextbox .contactTextheadline img {
+    position: absolute;
+    left: -2%;
+    height: 4px;
+    border: 4px;
+  }
+  .middleSection {
+    margin-right: 60px;
+  }
+}
+@media (max-width: 1200px) {
+  form {
+    position: relative;
+    right: -70px;
+  }
+  form input,
+  form textarea {
+    width: 55%;
+  }
+  form button {
+    position: relative;
+    top: -90px;
+  }
+  form .disabledButton {
+    position: relative;
+    top: 0;
+    left: -90px;
+  }
+  .middleSection {
+    margin-right: -20px;
+  }
+  .contactTextbox {
+    position: relative;
+    left: 2%;
+  }
+  .privacy {
+    width: 460px;
+    display: flex;
+    position: relative;
+  }
+  .contactTextbox .contactTextheadline img {
+    position: absolute;
+    left: -12%;
+    top: 44px;
+    height: 4px;
+    border: 4px;
+  }
+}
+@media (max-width: 1100px) {
+  .middleSection {
+    transform: scale(0.9);
+  }
+  .contactTextbox {
+    position: relative;
+    left: -45px;
+  }
+  form {
+    right: 30px;
+  }
+  .bottomSection {
+    height: 80px;
+  }
+  .bottomSection a {
+    height: 0px;
+  }
+  .blue {
+    display: flex;
+    top: 326px;
+  }
+}
+@media (max-width: 950px) {
+  form {
+    right: 70px;
+  }
+}
+@media (max-width: 900px) {
+  form {
+    position: relative;
+    right: 85px;
+  }
+  form input,
+  form textarea {
+    width: 45%;
+  }
+  form button,
+  form .disabledButton {
+    position: relative;
+    left: -120px;
+  }
+  .bottomSection .topArrow,
+  .bottomSection .topArrowGreen {
+    left: 550px;
+  }
+  .contactTextbox {
+    position: relative;
+  }
+  .contactTextbox span {
+    width: 400px;
+  }
+  .privacy {
+    width: 410px;
+    display: flex;
+    position: relative;
+  }
+}
+@media (max-width: 800px) {
+  section {
+    height: 950px;
+  }
+  form {
+    position: relative;
+    right: 95px;
+  }
+  form input,
+  form textarea {
+    width: 35%;
+  }
+  form button,
+  form .disabledButton {
+    position: relative;
+    left: -170px;
+  }
+  form span {
+    width: 340px;
+  }
+  .privacy {
+    width: 320px;
+  }
+}
+@media (max-width: 700px) {
+  .green {
+    top: 166px;
+    left: 66%;
+  }
+  .blue {
+    display: flex;
+    top: 265px;
+  }
+  section {
+    position: relative;
+    bottom: 0;
+    top: 100px;
+    height: 1100px;
+  }
+  .headline h1 {
+    gap: 10px;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: center;
+    width: 188px;
+    height: 54px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  .headline img {
+    width: 30%;
+  }
+  .middleSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    transform: scale(1);
+    margin-right: 0;
+  }
+  .bottomSection {
+    top: 0;
+  }
+  .bottomSection .topArrow,
+  .bottomSection .topArrowGreen {
+    left: 500px;
+  }
+  .contactTextbox {
+    position: relative;
+    left: 10px;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  .contactTextbox .contactTextheadline img {
+    position: absolute;
+    top: 32px;
+    left: -30%;
+    width: 100px;
+  }
+  .contactTextbox .contactTextheadline h2 {
+    width: 340px;
+    height: 28px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Poppins;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 27.6px;
+    text-align: left;
+  }
+  .contactTextbox .contactTextheadline span {
+    display: flex;
+    width: 500px;
+    height: 76px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+  }
+  .contactTextbox .contactTextheadline .callToAction {
+    width: 473px;
+    height: 38px;
+    gap: 8px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .contactTextbox .contactText span {
+    gap: 8px;
+  }
+  form {
+    height: 442px;
+    gap: 32px;
+    opacity: 0px;
+    position: relative;
+    left: 75px;
+  }
+  form span {
+    position: relative;
+    width: 400px;
+  }
+  form .inputBox {
+    width: 80%;
+    align-items: flex-start;
+  }
+  form .inputBox .imgPositioning {
+    position: relative;
+    right: 40px;
+    top: 16px;
+    height: 25px;
+    width: 25px;
+    padding-right: 0;
+  }
+  form input,
+  form textarea {
+    width: 80%;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  form .privacy {
+    width: 460px;
+    display: flex;
+    position: relative;
+    left: 0;
+  }
+  form .privacy span {
+    width: 617px;
+    gap: 8px;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+  }
+  form .privacy img {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    padding-top: 4px;
+    position: relative;
+  }
+  form button,
+  form .disabledButton {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    position: relative;
+    left: -100px;
+    width: 195px;
+    height: 49px;
+  }
+}
+@media (max-width: 600px) {
+  form .inputBox {
+    width: 75%;
+  }
+}
+@media (max-width: 500px) {
+  section {
+    height: 1100px;
+  }
+  form {
+    left: 100px;
+  }
+  form .inputBox {
+    width: 65%;
+  }
+  form .privacy {
+    width: 340px;
+    left: 0;
+  }
+  form button,
+  form .disabledButton {
+    left: -120px;
+  }
+  .contactTextbox {
+    position: relative;
+    left: 35px;
+  }
+  .contactTextbox span {
+    width: 300px;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 450px) {
+  section {
+    height: 1150px;
+  }
+  .contactTextbox {
+    left: 85px;
+  }
+  .callToAction {
+    transform: scale(0.88);
+    position: relative;
+    left: -27px;
+  }
+  form {
+    left: 140px;
+  }
+  form input,
+  form textarea {
+    width: 77.5%;
+  }
+  form span {
+    width: 290px;
+  }
+  form .inputBox {
+    width: 55%;
+  }
+  form button,
+  form .disabledButton {
+    left: -150px;
+  }
+  form .privacy {
+    width: 320px;
+    left: 0;
+  }
+}
+@media (max-width: 350px) {
+  .contactTextbox {
+    right: -85px;
+  }
+  .contactTextbox span {
+    width: 300px;
+    margin-bottom: 16px;
+  }
+  form {
+    left: 150px;
+  }
+  form .inputBox {
+    width: 50%;
+  }
+  form .privacy {
+    width: 250px;
+    left: 0;
+  }
+  form span {
+    width: 270px;
+  }
+  form input,
+  form textarea {
+    width: 75%;
+  }
+  form button,
+  form .disabledButton {
+    left: -160px;
+  }
+}

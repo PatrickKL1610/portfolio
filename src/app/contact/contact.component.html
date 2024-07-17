@@ -1,0 +1,134 @@
+<img
+  class="blue aos-init aos-animate"
+  src="../../assets/img/blueLineContacts.png"
+/>
+<img
+  class="green aos-init aos-animate"
+  src="../../assets/img/greenLineContacts.png"
+/>
+<section>
+  <div class="wrapperContact">
+    <div data-aos="fade-right" class="headline aos-init aos-animate">
+      <h1>Contact</h1>
+      <img src="../../assets/img/greenLineContacts.png" />
+    </div>
+    <div class="middleSection">
+      <div data-aos="fade-right" class="contactTextbox aos-init aos-animate">
+        <div class="contactTextheadline">
+          <h2>Got a problem to solve?</h2>
+        </div>
+        <div class="contactText">
+          <span
+            >Contact me through this form, I am interested in hearing you,
+            knowing your ideas and contributing to your projects with my work.
+          </span>
+          <span class="callToAction">
+            Need a Frontend developer?
+            <br />
+            <b>Need a Frontend developer? </b>
+          </span>
+        </div>
+      </div>
+      <form
+        novalidate
+        data-aos="fade-left"
+        class="formGab ng-untouched ng-pristine ng-invalid aos-init aos-animate"
+      >
+        <div class="inputGab">
+          <div class="inputBox">
+            <input
+              name="name"
+              type="text"
+              id="inputName"
+              required
+              placeholder="Your name"
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <img
+              id="errorImgName"
+              class="d-none imgPositioning"
+              src="../../assets/img/errorSymbol.png"
+            />
+            <img
+              id="successImgName"
+              class="d-none imgPositioning"
+              src="../../assets/img/successSymbol.png"
+            />
+          </div>
+          <span id="errorName" class="d-none">Ihr Name wird benötigt</span>
+        </div>
+        <div class="inputGab">
+          <div class="inputBox">
+            <input
+              name="email"
+              type="email"
+              id="inputMail"
+              required
+              placeholder="Your Email"
+              class="ng-untouched ng-pristine ng-invalid"
+            />
+            <img
+              id="errorImgMail"
+              class="d-none imgPositioning"
+              src="../../assets/img/errorSymbol.png"
+            />
+            <img
+              id="successImgMail"
+              class="d-none imgPositioning"
+              src="../../assets/img/successSymbol.png"
+            />
+          </div>
+          <span id="errorMail" class="d-none"
+            >Ihre E-Mail wird benötigt (z.B. beispiel&#64; domain.de)</span
+          >
+        </div>
+        <div class="inputGab">
+          <div class="inputBox">
+            <textarea
+              name="text"
+              minlength="4"
+              id="inputText"
+              required
+              placeholder="Your Message"
+              class="ng-untouched ng-pristine ng-invalid"
+            ></textarea>
+            <img
+              id="errorImgText"
+              class="d-none imgPositioning"
+              src="../../assets/img/errorSymbol.png"
+            />
+            <img
+              id="successImgText"
+              class="d-none imgPositioning"
+              src="../../assets/img/successSymbol.png"
+            />
+          </div>
+          <span id="errorText" class="d-none"
+            >Ihre Nachricht ist leer oder hat weniger als 4 Buchstaben</span
+          >
+        </div>
+        <div class="inputGab">
+          <div class="privacy">
+            <img src="../../assets/img/checkbox_unchecked.png" />
+            <span
+              >Ich habe die
+              <a
+                routerlink="/privacy"
+                routerlinkactive="active"
+                href="#/privacy"
+                >Datenschutzbestimmung</a
+              >
+              gelesen und stimme der Verarbeitung zu.
+            </span>
+          </div>
+          <span id="errorPrivacy" class="d-none"
+            >Bitte akzeptieren Sie die Datenschutzbestimmung
+          </span>
+        </div>
+        <div>
+          <button disabled class="disabledButton">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
