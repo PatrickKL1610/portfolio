@@ -14,9 +14,17 @@
 
     <div>
       <div class="headerlinks">
-        <a href="#aboutme">About me</a>
-        <a href="#myskills">Skills</a>
-        <a href="#myportfolio">Portfolio</a>
+        <a routerLink="/aboutme" (click)="scrollToSection($event, 'aboutme')"
+          >About me</a
+        >
+        <a routerLink="/skills" (click)="scrollToSection($event, 'myskills')"
+          >Skills</a
+        >
+        <a
+          routerLink="/portfolio"
+          (click)="scrollToSection($event, 'myportfolio')"
+          >Portfolio</a
+        >
       </div>
       <div class="burger" (click)="toggleBurgerMenu($event)">
         <img src="../../assets/img/burger_menu.png" />
@@ -32,10 +40,28 @@
 >
   <div class="orientation">
     <div>
-      <a href="#aboutme" (click)="closeBurgerMenu($event)">About me</a>
-      <a href="#myskills" (click)="closeBurgerMenu($event)">Skills</a>
-      <a href="#myportfolio" (click)="closeBurgerMenu($event)">Portfolio</a>
-      <a href="#mycontact" (click)="closeBurgerMenu($event)">Contact</a>
+      <a
+        routerLink="/aboutme"
+        (click)="closeBurgerMenu($event); scrollToSection($event, 'aboutme')"
+        >About me</a
+      >
+      <a
+        routerLink="/skills"
+        (click)="closeBurgerMenu($event); scrollToSection($event, 'myskills')"
+        >Skills</a
+      >
+      <a
+        routerLink="/portfolio"
+        (click)="
+          closeBurgerMenu($event); scrollToSection($event, 'myportfolio')
+        "
+        >Portfolio</a
+      >
+      <a
+        routerLink="/contakt"
+        (click)="closeBurgerMenu($event); scrollToSection($event, 'mycontact')"
+        >Contact</a
+      >
     </div>
   </div>
 </div>

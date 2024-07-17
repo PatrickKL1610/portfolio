@@ -8,6 +8,7 @@ import AOS from 'aos';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ import { ContactComponent } from './contact/contact.component';
     SkillsComponent,
     PortfolioComponent,
     ContactComponent,
+    FooterComponent,
   ],
 })
 export class AppComponent {

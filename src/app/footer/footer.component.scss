@@ -1,0 +1,167 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  width: 100%;
+  height: 287px;
+  background: linear-gradient(0deg, #141d2f, #141d2f);
+  border-top: 4px solid #70e61c;
+}
+
+.wrapperFooter {
+  display: flex;
+  width: 100%;
+  max-width: 1920px;
+  min-width: 320px;
+  justify-content: space-between;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Poppins;
+}
+
+.d-none {
+  display: none;
+}
+
+.textbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 70px;
+}
+
+.copyright {
+  font-family: Poppins;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  width: 174px;
+}
+
+.socials img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, content 0.3s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.5);
+}
+
+#name {
+  cursor: pointer;
+  display: flex;
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 27.6px;
+  gap: 10px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+#impressum {
+  gap: 3px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+}
+
+.name a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.name img {
+  display: none;
+}
+
+#impressum:hover {
+  border-bottom: 2px solid #1cdae6;
+  width: 44px;
+}
+
+#github-button {
+  content: url("../../assets/img/github_button.png");
+}
+
+#email-button {
+  content: url("../../assets/img/email_button.png");
+}
+
+#linkedin-button {
+  content: url("../../assets/img/linkedin_button.png");
+}
+
+#github-button:hover {
+  content: url("../../assets/img/github_button_hover.png");
+}
+
+#email-button:hover {
+  content: url("../../assets/img/email_button_hover.png");
+}
+
+#linkedin-button:hover {
+  content: url("../../assets/img/linkedin_button_hover.png");
+}
+
+@media (max-width: 900px) {
+  .copyright {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  footer {
+    height: 287px;
+  }
+  footer .textbox {
+    flex-direction: column;
+    gap: 32px;
+  }
+  footer .textbox span {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .copyright {
+    font-size: 23px;
+  }
+  .socials img {
+    width: 30px;
+    height: 30px;
+  }
+  #name {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 27.6px;
+  }
+}

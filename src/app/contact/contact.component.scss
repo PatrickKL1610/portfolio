@@ -355,6 +355,11 @@ form button {
     display: flex;
   }
 }
+@media (max-width: 1200px) {
+  form button {
+    top: 0 !important;
+  }
+}
 @media (max-width: 1300px) {
   form input,
   form textarea {

@@ -1,4 +1,5 @@
 import { Component, ElementRef, Renderer2, HostListener } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,17 @@ import { Component, ElementRef, Renderer2, HostListener } from '@angular/core';
 export class NavbarComponent {
   isBurgerMenuVisible = false;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+    private router: Router
+  ) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.isBurgerMenuVisible = false;
+      }
+    });
+  }
 
   toggleBurgerMenu(event: Event) {
     this.isBurgerMenuVisible = !this.isBurgerMenuVisible;
@@ -21,6 +32,14 @@ export class NavbarComponent {
       this.isBurgerMenuVisible = false;
     }
     event.stopPropagation();
+  }
+
+  scrollToSection(event: Event, sectionId: string) {
+    event.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   @HostListener('document:click', ['$event'])

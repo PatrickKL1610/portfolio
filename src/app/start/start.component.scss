@@ -150,6 +150,16 @@ button:hover {
   margin-left: 15px;
 }
 
+.sociallinks img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, content 0.3s ease;
+}
+
+.sociallinks img:hover {
+  transform: scale(1.5);
+}
+
 .scrolldown {
   display: flex;
   position: relative;
@@ -168,6 +178,19 @@ button:hover {
     color: #fff;
   }
 }
+
+#github-button:hover {
+  content: url("../../assets/img/github_button_hover.png");
+}
+
+#email-button:hover {
+  content: url("../../assets/img/email_button_hover.png");
+}
+
+#linkedin-button:hover {
+  content: url("../../assets/img/linkedin_button_hover.png");
+}
+
 @media (max-width: 2200px) {
   .horizontal {
     right: 100px;
