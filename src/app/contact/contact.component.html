@@ -54,7 +54,7 @@
             />
           </div>
           <span [class.d-none]="!name.invalid || !name.touched" id="errorName">
-            Ihr Name wird benötigt
+            Your name is required
           </span>
         </div>
         <div class="inputGab">
@@ -87,7 +87,7 @@
             [class.d-none]="!email.invalid || !email.touched"
             id="errorMail"
           >
-            Ihre E-Mail wird benötigt (z.B. beispiel&#64;domain.de)
+            Your email is required (e.g. yourname&#64;domain.com)
           </span>
         </div>
         <div class="inputGab">
@@ -119,7 +119,7 @@
             [class.d-none]="!message.invalid || !message.touched"
             id="errorText"
           >
-            Ihre Nachricht ist leer oder hat weniger als 4 Buchstaben
+            Your message is empty or has fewer than 4 letters
           </span>
         </div>
         <div class="inputGab">
@@ -134,21 +134,21 @@
               (mouseout)="onPrivacyHover(false)"
             />
             <span>
-              Ich habe die
+              I've read the
               <a
                 routerlink="/privacy"
                 routerlinkactive="active"
                 href="#/privacy"
-                >Datenschutzbestimmung</a
+                >privacy policy</a
               >
-              gelesen und stimme der Verarbeitung zu.
+              and agree to the processing of my data as outlined.
             </span>
           </div>
           <span
             [class.d-none]="contactData.privacy || !privacyTouched"
             id="errorPrivacy"
           >
-            Bitte akzeptieren Sie die Datenschutzbestimmung
+            Please accept the privacy policy.
           </span>
         </div>
         <div>

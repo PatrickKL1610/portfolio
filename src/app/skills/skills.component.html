@@ -4,9 +4,9 @@
   class="blueline aos-init aos-animate"
   src="../../assets/img/line_blue.png"
 />
-<section id="myskills">
+<section>
   <div class="mobileButton d-none">
-    <a href="#mycontact">
+    <a routerLink="/contact" (click)="scrollToSection($event, 'mycontact')">
       <button id="myPortfolio">Contact</button>
     </a>
   </div>
@@ -93,10 +93,10 @@
         <img src="../../assets/img/line_blue.png" />
       </div>
       <span>
-        Ich habe Erfahrung im Aufbau von Projekten mit verschiedenen
-        Frontendtechnologien und -Konzepten gesammelt.
+        I have gained experience in building projects with various front end
+        technologies and concepts.
       </span>
-      <a href="#mycontact">
+      <a routerLink="/contact" (click)="scrollToSection($event, 'mycontact')">
         <button>Contact</button>
       </a>
     </div>

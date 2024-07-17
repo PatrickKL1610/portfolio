@@ -11,7 +11,7 @@ export const routes: Routes = [
   { path: 'aboutme', component: AboutmeComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'portfolio', component: PortfolioComponent },
-  { path: 'contakt', component: ContactComponent },
+  { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({

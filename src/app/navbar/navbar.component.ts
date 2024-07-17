@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
@@ -10,11 +10,7 @@ import { Router, NavigationEnd } from '@angular/router';
 export class NavbarComponent {
   isBurgerMenuVisible = false;
 
-  constructor(
-    private el: ElementRef,
-    private renderer: Renderer2,
-    private router: Router
-  ) {
+  constructor(private el: ElementRef, private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isBurgerMenuVisible = false;
