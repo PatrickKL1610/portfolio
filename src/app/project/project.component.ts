@@ -22,6 +22,7 @@ export class ProjectComponent {
   @Input() idproject!: string;
   @Input() idbackground!: string;
   @Input() idimage!: string;
+  @Input() testlink!: string;
 
   private imageElement!: ElementRef<HTMLImageElement>;
   private divElement!: ElementRef<HTMLDivElement>;
