@@ -26,7 +26,7 @@ export class ContactComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://klein-patrick.ch/sendMail.php',
+    endPoint: 'https://klein-patrick.ch/sendmail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
