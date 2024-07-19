@@ -23,10 +23,10 @@ export class ContactComponent {
   privacyTouched = false;
   isPrivacyHovered = false;
 
-  mailTest = true;
+  mailTest = false; // Setze mailTest auf false, um POST-Anfrage zu aktivieren
 
   post = {
-    endPoint: 'https://klein-patrick.ch/sendmail.php',
+    endPoint: 'https://klein-patrick.ch/sendmail.php', //muss noch geändert werden
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -37,7 +37,7 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http
         .post(
           this.post.endPoint,
@@ -55,10 +55,6 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      ngForm.resetForm();
-      this.contactData.privacy = false; // Reset privacy checkbox
-      this.privacyTouched = false; // Reset privacyTouched
     }
   }
 
