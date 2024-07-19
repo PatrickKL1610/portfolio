@@ -7,7 +7,6 @@
   position: fixed;
   justify-content: center;
   align-items: center;
-  color: #fff;
   z-index: 999;
   padding: 24px 50px;
   background-color: #141d2f;
@@ -69,6 +68,17 @@
 .burger {
   display: none !important;
 }
+.headerlinks a.active,
+.burgerMenu a.active {
+  color: $specgreen !important; /* Farbe für aktive Links */
+}
+
+.headerlinks a,
+.burgerMenu a {
+  color: #fff !important; /* Standardfarbe für Links */
+  text-decoration: none;
+  padding: 10px;
+}
 
 .burgerMenu {
   position: fixed;
@@ -97,7 +107,6 @@
     align-items: flex-start;
     justify-content: start;
     text-decoration: none;
-    color: #fff;
     cursor: pointer;
     font-family: Poppins;
     font-size: 23px;

@@ -1,7 +1,7 @@
 <header class="header">
   <div class="navbar-container">
     <div class="logo">
-      <a href="" class="active">
+      <a href="">
         <span>P</span>
         <span>a</span>
         <span>t</span>
@@ -14,20 +14,33 @@
 
     <div>
       <div class="headerlinks">
-        <a routerLink="/" (click)="scrollToSection($event, 'start')">Home</a>
-        <a routerLink="/aboutme" (click)="scrollToSection($event, 'aboutme')"
+        <a
+          routerLink="/"
+          [class.active]="activeSection === 'start'"
+          (click)="scrollToSection($event, 'start')"
+          >Home</a
+        >
+        <a
+          routerLink="/aboutme"
+          [class.active]="activeSection === 'aboutme'"
+          (click)="scrollToSection($event, 'aboutme')"
           >About me</a
         >
-        <a routerLink="/skills" (click)="scrollToSection($event, 'myskills')"
+        <a
+          routerLink="/skills"
+          [class.active]="activeSection === 'myskills'"
+          (click)="scrollToSection($event, 'myskills')"
           >Skills</a
         >
         <a
           routerLink="/portfolio"
+          [class.active]="activeSection === 'myportfolio'"
           (click)="scrollToSection($event, 'myportfolio')"
           >Portfolio</a
         >
         <a
-          routerLink="/mycontact"
+          routerLink="/contact"
+          [class.active]="activeSection === 'mycontact'"
           (click)="scrollToSection($event, 'mycontact')"
           >Contact</a
         >
@@ -48,16 +61,19 @@
     <div>
       <a
         routerLink="/aboutme"
+        [class.active]="activeSection === 'aboutme'"
         (click)="closeBurgerMenu($event); scrollToSection($event, 'aboutme')"
         >About me</a
       >
       <a
         routerLink="/skills"
+        [class.active]="activeSection === 'myskills'"
         (click)="closeBurgerMenu($event); scrollToSection($event, 'myskills')"
         >Skills</a
       >
       <a
         routerLink="/portfolio"
+        [class.active]="activeSection === 'myportfolio'"
         (click)="
           closeBurgerMenu($event); scrollToSection($event, 'myportfolio')
         "
@@ -65,6 +81,7 @@
       >
       <a
         routerLink="/contact"
+        [class.active]="activeSection === 'mycontact'"
         (click)="closeBurgerMenu($event); scrollToSection($event, 'mycontact')"
         >Contact</a
       >
