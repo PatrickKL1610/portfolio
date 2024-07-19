@@ -60,6 +60,12 @@
   <div class="orientation">
     <div>
       <a
+        routerLink="/"
+        [class.active]="activeSection === 'start'"
+        (click)="closeBurgerMenu($event); scrollToSection($event, 'start')"
+        >Home</a
+      >
+      <a
         routerLink="/aboutme"
         [class.active]="activeSection === 'aboutme'"
         (click)="closeBurgerMenu($event); scrollToSection($event, 'aboutme')"

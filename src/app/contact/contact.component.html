@@ -123,12 +123,9 @@
           </span>
         </div>
         <div class="inputGab">
-          <div
-            class="privacy"
-            (click)="togglePrivacy()"
-            (blur)="privacyTouched = true"
-          >
+          <div class="privacy" (blur)="privacyTouched = true">
             <img
+              (click)="togglePrivacy($event)"
               [src]="getCheckboxImage()"
               (mouseover)="onPrivacyHover(true)"
               (mouseout)="onPrivacyHover(false)"
@@ -136,14 +133,15 @@
             <span>
               I've read the
               <a
-                routerlink="/privacy"
-                routerlinkactive="active"
-                href="#/privacy"
+                routerLink="/policy"
+                routerLinkActive="active"
+                (click)="navigatePolicy($event)"
                 >privacy policy</a
               >
               and agree to the processing of my data as outlined.
             </span>
           </div>
+
           <span
             [class.d-none]="contactData.privacy || !privacyTouched"
             id="errorPrivacy"

@@ -1,7 +1,8 @@
-import { NgClass } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
@@ -12,6 +13,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
   http = inject(HttpClient);
+  router = inject(Router);
 
   contactData = {
     name: '',
@@ -64,7 +66,11 @@ export class ContactComponent {
     }
   }
 
-  togglePrivacy() {
+  togglePrivacy(event: Event) {
+    // Verhindere, dass das Click-Event auf das Eltern-Element ausgedehnt wird, falls es vom Link stammt
+    if (event.target instanceof HTMLAnchorElement) {
+      return;
+    }
     this.contactData.privacy = !this.contactData.privacy;
     this.privacyTouched = true;
   }
@@ -83,5 +89,11 @@ export class ContactComponent {
         ? '../../assets/img/checkbox_checked.png'
         : '../../assets/img/checkbox_unchecked.png';
     }
+  }
+
+  navigatePolicy(event: Event) {
+    // Stelle sicher, dass das Click-Event des Links nicht von anderen Click-Events beeinflusst wird
+    event.stopPropagation();
+    this.router.navigate(['/policy']);
   }
 }

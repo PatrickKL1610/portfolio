@@ -32,6 +32,13 @@ app-skills {
     top: -150px;
   }
 }
+@media (max-width: 900px) {
+  app-main-layout {
+    width: 100vw;
+    overflow-x: hidden;
+    display: block;
+  }
+}
 @media (max-width: 700px) {
   app-skills {
     position: relative;

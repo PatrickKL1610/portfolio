@@ -7,6 +7,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { PolicyComponent } from './policy/policy.component';
 
 export const routes: Routes = [
   {
@@ -21,6 +22,7 @@ export const routes: Routes = [
     ],
   },
   { path: 'legal', component: ImprintComponent },
+  { path: 'policy', component: PolicyComponent },
 ];
 
 @NgModule({

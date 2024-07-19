@@ -1,0 +1,95 @@
+@import "../../assets/colors.scss";
+
+section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  color: $white;
+}
+.buttonContainer {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  z-index: 1000;
+}
+.wrapperPolicy {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  min-width: 320px;
+  padding: 25px;
+}
+p {
+  color: $white;
+  font-family: Poppins;
+  font-size: 10px;
+  line-height: 17px;
+}
+h1 {
+  color: $white;
+  font-family: Poppins;
+  line-height: 27.6px;
+  font-size: 23px;
+}
+a {
+  color: $white;
+  text-decoration: none;
+}
+strong {
+  color: $white;
+  font-family: Poppins700;
+  font-size: 16px;
+  line-height: 17px;
+}
+#text {
+  color: $white;
+}
+.legal {
+  height: max-content;
+  text-wrap: wrap;
+  overflow-y: scroll;
+  padding: 20px 32px 10px 40px;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  width: 165px;
+  height: 58px;
+  border-radius: 10px;
+  border-color: $specgreen;
+  gap: 10px;
+  background: $specgreen;
+  box-shadow: 4px 4px 4px $shadowdark;
+  cursor: pointer;
+  color: $white;
+  font-family: Poppins;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+}
+button:hover {
+  background-color: $specpurple;
+  border-color: $specpurple;
+  transform: scale(1.2);
+}
+::-webkit-scrollbar {
+  overflow-y: hidden;
+}
+
+@media (max-width: 450px) {
+  .buttonContainer {
+    position: absolute;
+    right: unset;
+  }
+  .section {
+    flex-direction: column;
+  }
+  .wrapperPolicy {
+    position: relative;
+    top: 70px;
+  }
+}
