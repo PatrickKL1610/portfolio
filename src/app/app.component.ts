@@ -28,7 +28,7 @@ import { FooterComponent } from './footer/footer.component';
   ],
 })
 export class AppComponent {
-  title = 'portfolio';
+  title = 'Portfolio';
   constructor() {
     AOS.init();
   }

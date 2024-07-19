@@ -44,3 +44,12 @@ app-skills {
     top: 40px;
   }
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $specgreen;
+  border-radius: 2px;
+}
