@@ -5,6 +5,7 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 export const routes: Routes = [
   { path: '', component: StartComponent },
@@ -12,6 +13,7 @@ export const routes: Routes = [
   { path: 'skills', component: SkillsComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'legal', component: ImprintComponent },
 ];
 
 @NgModule({
