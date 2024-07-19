@@ -14,6 +14,7 @@
 
     <div>
       <div class="headerlinks">
+        <a routerLink="/" (click)="scrollToSection($event, 'start')">Home</a>
         <a routerLink="/aboutme" (click)="scrollToSection($event, 'aboutme')"
           >About me</a
         >
@@ -24,6 +25,11 @@
           routerLink="/portfolio"
           (click)="scrollToSection($event, 'myportfolio')"
           >Portfolio</a
+        >
+        <a
+          routerLink="/mycontact"
+          (click)="scrollToSection($event, 'mycontact')"
+          >Contact</a
         >
       </div>
       <div class="burger" (click)="toggleBurgerMenu($event)">
