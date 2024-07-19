@@ -1,3 +1,5 @@
+@import "../../assets/colors.scss";
+
 section {
   display: flex;
   justify-content: center;
@@ -15,14 +17,12 @@ section {
 p {
   color: #fff;
   font-family: Poppins;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 17px;
 }
 h1 {
   color: #fff;
   font-family: Poppins;
-  font-weight: 400;
   line-height: 27.6px;
   font-size: 23px;
 }
@@ -33,7 +33,6 @@ a {
 strong {
   color: #fff;
   font-family: Poppins700;
-  font-weight: 600;
   font-size: 16px;
   line-height: 17px;
 }
@@ -44,7 +43,31 @@ strong {
   height: max-content;
   text-wrap: wrap;
   overflow-y: scroll;
-  padding: 148px 32px 5% 43px;
+  padding: 20px 32px 10px 40px;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  width: 165px;
+  height: 58px;
+  border-radius: 10px;
+  border-color: $specgreen;
+  gap: 10px;
+  background: $specgreen;
+  box-shadow: 4px 4px 4px #00000040;
+  cursor: pointer;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 27.6px;
+}
+button:hover {
+  background-color: #9747ff;
+  border-color: #9747ff;
+  transform: scale(1.2);
 }
 ::-webkit-scrollbar {
   overflow-y: hidden;
@@ -54,7 +77,6 @@ strong {
     height: max-content;
     text-wrap: wrap;
     overflow-y: scroll;
-    padding: 148px 32px 5% 56px;
   }
 }
 @media (max-width: 410px) {
@@ -62,6 +84,5 @@ strong {
     height: max-content;
     text-wrap: wrap;
     overflow-y: scroll;
-    padding: 148px 32px 5% 17px;
   }
 }
