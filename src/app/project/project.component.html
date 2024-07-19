@@ -7,8 +7,18 @@
       </p>
       <span>{{ tech }}</span>
     </div>
-    <button class="gitButton gitLink" id="{{ idgit }}">Github</button>
-    <button class="testButton liveTest" id="{{ idtest }}" href="../">
+    <button
+      class="gitButton gitLink"
+      id="{{ idgit }}"
+      (click)="navigateTo(gitlink)"
+    >
+      Github
+    </button>
+    <button
+      class="testButton liveTest"
+      id="{{ idtest }}"
+      (click)="navigateTo(testlink)"
+    >
       Live test
     </button>
   </div>

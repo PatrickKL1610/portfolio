@@ -23,6 +23,13 @@ export class ProjectComponent {
   @Input() idbackground!: string;
   @Input() idimage!: string;
   @Input() testlink!: string;
+  @Input() gitlink!: string;
+
+  navigateTo(link: string) {
+    window.open(link, '_blank');
+
+    //window.location.href = link;
+  }
 
   private imageElement!: ElementRef<HTMLImageElement>;
   private divElement!: ElementRef<HTMLDivElement>;
