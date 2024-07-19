@@ -9,7 +9,7 @@
   align-items: center;
   z-index: 999;
   padding: 24px 50px;
-  background-color: #141d2f;
+  background-color: $darkblueBG;
   div {
     display: flex;
     text-wrap: nowrap;
@@ -21,7 +21,7 @@
   }
   div a {
     text-decoration: none;
-    color: #fff;
+    color: $white;
     cursor: pointer;
     font-size: 23px;
     font-weight: 400;
@@ -52,14 +52,14 @@
 }
 
 .i-styling {
-  background: linear-gradient(to top, #fff 65%, $specpurple 15%);
+  background: linear-gradient(to top, $white 65%, $specpurple 15%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .k-styling {
-  background: linear-gradient(to right, #fff 30%, $specgreen 50%);
+  background: linear-gradient(to right, $white 30%, $specgreen 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,7 +75,7 @@
 
 .headerlinks a,
 .burgerMenu a {
-  color: #fff !important; /* Standardfarbe für Links */
+  color: $white !important; /* Standardfarbe für Links */
   text-decoration: none;
   padding: 10px;
 }
@@ -90,7 +90,7 @@
   flex-direction: column;
   width: 102vw;
   height: 100vh;
-  background-color: #414856;
+  background-color: $bluezodiac;
   transform: translate(102vw);
   transition: all 125ms ease-in-out;
   .orientation {

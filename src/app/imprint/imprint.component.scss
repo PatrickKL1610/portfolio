@@ -5,7 +5,13 @@ section {
   justify-content: center;
   width: 100%;
   overflow: hidden;
-  color: #fff;
+  color: $white;
+}
+.buttonContainer {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  z-index: 1000;
 }
 .wrapperLegal {
   display: flex;
@@ -15,29 +21,29 @@ section {
   min-width: 320px;
 }
 p {
-  color: #fff;
+  color: $white;
   font-family: Poppins;
   font-size: 10px;
   line-height: 17px;
 }
 h1 {
-  color: #fff;
+  color: $white;
   font-family: Poppins;
   line-height: 27.6px;
   font-size: 23px;
 }
 a {
-  color: #fff;
+  color: $white;
   text-decoration: none;
 }
 strong {
-  color: #fff;
+  color: $white;
   font-family: Poppins700;
   font-size: 16px;
   line-height: 17px;
 }
 #text {
-  color: #fff;
+  color: $white;
 }
 .legal {
   height: max-content;
@@ -56,17 +62,17 @@ button {
   border-color: $specgreen;
   gap: 10px;
   background: $specgreen;
-  box-shadow: 4px 4px 4px #00000040;
+  box-shadow: 4px 4px 4px $shadowdark;
   cursor: pointer;
-  color: #fff;
+  color: $white;
   font-family: Poppins;
   font-size: 23px;
   font-weight: 400;
   line-height: 27.6px;
 }
 button:hover {
-  background-color: #9747ff;
-  border-color: #9747ff;
+  background-color: $specpurple;
+  border-color: $specpurple;
   transform: scale(1.2);
 }
 ::-webkit-scrollbar {
