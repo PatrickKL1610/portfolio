@@ -130,7 +130,7 @@ button {
   top: 228px;
   border-radius: 10px;
   border-color: $specgreen;
-  padding: 15px, 30px, 15px, 30px;
+  padding: 15px 30px;
   gap: 10px;
   background: $specgreen;
   box-shadow: 4px 4px 4px $shadowdark;
@@ -268,7 +268,7 @@ button:hover {
     color: $white;
   }
   .mobileButton {
-    width: 100px;
+    width: 85px;
     display: flex;
     position: relative;
     top: -450px;
