@@ -11,8 +11,4 @@ import { FooterComponent } from '../footer/footer.component';
 })
 export class PolicyComponent {
   constructor(private router: Router) {}
-
-  navigateHome() {
-    this.router.navigate(['/']);
-  }
 }

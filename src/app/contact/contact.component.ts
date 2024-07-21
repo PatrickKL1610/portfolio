@@ -92,8 +92,7 @@ export class ContactComponent {
   }
 
   navigatePolicy(event: Event) {
-    // Stelle sicher, dass das Click-Event des Links nicht von anderen Click-Events beeinflusst wird
     event.stopPropagation();
-    this.router.navigate(['/policy']);
+    window.open('/policy', '_blank');
   }
 }
