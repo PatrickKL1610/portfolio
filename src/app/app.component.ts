@@ -9,6 +9,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +31,12 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'Portfolio';
-  constructor() {
+  constructor(private router: Router) {
     AOS.init();
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo(0, 0); // Scrollt zur obersten Position
+      });
   }
 }
