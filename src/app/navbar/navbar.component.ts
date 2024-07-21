@@ -34,7 +34,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.initializeSections();
-    this.setupIntersectionObserver();
+    this.updateActiveSection();
   }
 
   initializeSections() {
@@ -57,26 +57,6 @@ export class NavbarComponent implements OnInit, AfterViewInit {
         offset: document.getElementById('mycontact')?.offsetTop || 0,
       },
     ];
-  }
-
-  setupIntersectionObserver() {
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver(
-      this.handleIntersect.bind(this),
-      observerOptions
-    );
-
-    this.sections.forEach((section) => {
-      const element = document.getElementById(section.id);
-      if (element) {
-        observer.observe(element);
-      }
-    });
   }
 
   handleIntersect(entries: IntersectionObserverEntry[]) {
