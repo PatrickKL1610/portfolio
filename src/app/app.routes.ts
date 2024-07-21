@@ -23,6 +23,7 @@ export const routes: Routes = [
   },
   { path: 'legal', component: ImprintComponent },
   { path: 'policy', component: PolicyComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
