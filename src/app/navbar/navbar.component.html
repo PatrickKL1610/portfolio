@@ -61,25 +61,21 @@
     <div>
       <a
         routerLink="/"
-        [class.active]="activeSection === 'start'"
         (click)="closeBurgerMenu($event); scrollToSection($event, 'start')"
         >Home</a
       >
       <a
         routerLink="/aboutme"
-        [class.active]="activeSection === 'aboutme'"
         (click)="closeBurgerMenu($event); scrollToSection($event, 'aboutme')"
         >About me</a
       >
       <a
         routerLink="/skills"
-        [class.active]="activeSection === 'myskills'"
         (click)="closeBurgerMenu($event); scrollToSection($event, 'myskills')"
         >Skills</a
       >
       <a
         routerLink="/portfolio"
-        [class.active]="activeSection === 'myportfolio'"
         (click)="
           closeBurgerMenu($event); scrollToSection($event, 'myportfolio')
         "
@@ -87,7 +83,6 @@
       >
       <a
         routerLink="/contact"
-        [class.active]="activeSection === 'mycontact'"
         (click)="closeBurgerMenu($event); scrollToSection($event, 'mycontact')"
         >Contact</a
       >
