@@ -92,6 +92,15 @@
         (click)="closeBurgerMenu($event); scrollToSection($event, 'mycontact')"
         >{{ texts.CONTACT }}</a
       >
+      <div class="select-container">
+        <select
+          (change)="switchLanguage($event)"
+          (click)="stopPropagation($event)"
+        >
+          <option value="en">Englisch 🇬🇧</option>
+          <option value="de">Deutsch 🇩🇪</option>
+        </select>
+      </div>
     </div>
   </div>
 </div>

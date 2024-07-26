@@ -27,6 +27,10 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     this.languageService.setLanguage(selectedLanguage);
   }
 
+  stopPropagation(event: Event) {
+    event.stopPropagation();
+  }
+
   private sections: { id: string; offset: number }[] = [];
 
   constructor(
