@@ -129,7 +129,6 @@ export class NavbarComponent implements OnInit, AfterViewInit {
 
     for (let i = this.sections.length - 1; i >= 0; i--) {
       if (scrollPosition >= this.sections[i].offset - 50) {
-        // Adjust the offset as needed
         this.activeSection = this.sections[i].id;
         break;
       }

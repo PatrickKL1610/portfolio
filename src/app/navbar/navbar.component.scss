@@ -72,12 +72,12 @@
 }
 .headerlinks a.active,
 .burgerMenu a.active {
-  color: $specgreen !important; /* Farbe für aktive Links */
+  color: $specgreen !important;
 }
 
 .headerlinks a,
 .burgerMenu a {
-  color: $white !important; /* Standardfarbe für Links */
+  color: $white !important;
   text-decoration: none;
   padding: 10px;
 }

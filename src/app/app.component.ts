@@ -36,7 +36,7 @@ export class AppComponent {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
-        window.scrollTo(0, 0); // Scrollt zur obersten Position
+        window.scrollTo(0, 0);
       });
   }
 }

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { LanguageService } from '../language.service'; // Stellen Sie sicher, dass der Pfad korrekt ist
-import { translations, TranslationKey } from '../translations'; // Stellen Sie sicher, dass der Pfad korrekt ist
-
+import { LanguageService } from '../language.service';
+import { translations, TranslationKey } from '../translations';
 @Component({
   selector: 'app-skills',
   standalone: true,

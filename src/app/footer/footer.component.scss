@@ -1,3 +1,4 @@
+@import "../../assets/colors.scss";
 footer {
   display: flex;
   justify-content: center;
@@ -6,8 +7,8 @@ footer {
   overflow: hidden;
   width: 100%;
   height: 260px;
-  background: linear-gradient(0deg, #141d2f, #141d2f);
-  border-top: 4px solid #70e61c;
+  background: linear-gradient(0deg, $darkblueBG, $darkblueBG);
+  border-top: 4px solid $specgreen;
 }
 
 .wrapperFooter {
@@ -19,7 +20,7 @@ footer {
 }
 
 a {
-  color: #fff;
+  color: $white;
   text-decoration: none;
   font-family: Poppins;
 }
@@ -102,7 +103,7 @@ a {
 }
 
 #impressum:hover {
-  border-bottom: 2px solid #1cdae6;
+  border-bottom: 2px solid $speclightblue;
   width: 44px;
 }
 

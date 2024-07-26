@@ -27,8 +27,6 @@ export class ProjectComponent {
 
   navigateTo(link: string) {
     window.open(link, '_blank');
-
-    //window.location.href = link;
   }
 
   private imageElement!: ElementRef<HTMLImageElement>;
