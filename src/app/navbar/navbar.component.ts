@@ -6,6 +6,8 @@ import {
   AfterViewInit,
 } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { LanguageService } from '../language.service';
+import { translations, TranslationKey } from '../translations';
 
 @Component({
   selector: 'app-navbar',
@@ -16,14 +18,31 @@ import { Router, NavigationEnd } from '@angular/router';
 export class NavbarComponent implements OnInit, AfterViewInit {
   isBurgerMenuVisible = false;
   activeSection = 'start';
+  currentLanguage: TranslationKey = 'en';
+  texts = translations[this.currentLanguage];
+
+  switchLanguage(event: any) {
+    const selectedLanguage = event.target.value;
+    this.languageService.setLanguage(selectedLanguage);
+  }
 
   private sections: { id: string; offset: number }[] = [];
 
-  constructor(private el: ElementRef, private router: Router) {
+  constructor(
+    private el: ElementRef,
+    private router: Router,
+    private languageService: LanguageService
+  ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isBurgerMenuVisible = false;
         this.updateActiveSection();
+      }
+    });
+    this.languageService.language$.subscribe((lang) => {
+      if (lang in translations) {
+        this.currentLanguage = lang as TranslationKey;
+        this.texts = translations[this.currentLanguage];
       }
     });
   }

@@ -14,6 +14,12 @@
 
     <div>
       <div class="headerlinks">
+        <div class="select-container">
+          <select (change)="switchLanguage($event)">
+            <option value="en">Englisch 🇬🇧</option>
+            <option value="de">Deutsch 🇩🇪</option>
+          </select>
+        </div>
         <a
           routerLink="/"
           [class.active]="activeSection === 'start'"
@@ -24,7 +30,7 @@
           routerLink="/aboutme"
           [class.active]="activeSection === 'aboutme'"
           (click)="scrollToSection($event, 'aboutme')"
-          >About me</a
+          >{{ texts.ABOUT_ME }}</a
         >
         <a
           routerLink="/skills"
@@ -42,7 +48,7 @@
           routerLink="/contact"
           [class.active]="activeSection === 'mycontact'"
           (click)="scrollToSection($event, 'mycontact')"
-          >Contact</a
+          >{{ texts.CONTACT }}</a
         >
       </div>
       <div class="burger" (click)="toggleBurgerMenu($event)">
@@ -67,7 +73,7 @@
       <a
         routerLink="/aboutme"
         (click)="closeBurgerMenu($event); scrollToSection($event, 'aboutme')"
-        >About me</a
+        >{{ texts.ABOUT_ME }}</a
       >
       <a
         routerLink="/skills"
@@ -84,7 +90,7 @@
       <a
         routerLink="/contact"
         (click)="closeBurgerMenu($event); scrollToSection($event, 'mycontact')"
-        >Contact</a
+        >{{ texts.CONTACT }}</a
       >
     </div>
   </div>

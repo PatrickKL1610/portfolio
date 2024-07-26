@@ -14,7 +14,6 @@
     display: flex;
     text-wrap: nowrap;
     margin-right: 24px;
-    height: 32px;
   }
   .name a {
     margin-left: 0;
@@ -27,6 +26,9 @@
     font-weight: 400;
     line-height: 27.6px;
     margin-left: 32px;
+  }
+  .logo {
+    align-items: center;
   }
   span {
     cursor: pointer;
@@ -79,6 +81,42 @@
   text-decoration: none;
   padding: 10px;
 }
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $specgreen;
+  border-radius: 5px;
+  background-color: $darkblueBG;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: $specgreen;
+}
+
+.select-container::after {
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: $specgreen;
+}
+
+.select-container {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  margin: 0;
+}
+
+select:hover,
+select:focus {
+  border-color: $specgreen;
+  outline: none;
+  cursor: pointer;
+}
 
 .burgerMenu {
   position: fixed;
@@ -102,6 +140,7 @@
     position: absolute;
     top: 100px;
   }
+
   a {
     display: flex;
     align-items: flex-start;

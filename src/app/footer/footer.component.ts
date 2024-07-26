@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { LanguageService } from '../language.service';
+import { translations, TranslationKey } from '../translations';
 
 @Component({
   selector: 'app-footer',
@@ -8,4 +10,16 @@ import { RouterModule } from '@angular/router';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
-export class FooterComponent {}
+export class FooterComponent {
+  currentLanguage: TranslationKey = 'en';
+  texts = translations[this.currentLanguage];
+
+  constructor(private languageService: LanguageService) {
+    this.languageService.language$.subscribe((lang) => {
+      if (lang in translations) {
+        this.currentLanguage = lang as TranslationKey;
+        this.texts = translations[this.currentLanguage];
+      }
+    });
+  }
+}

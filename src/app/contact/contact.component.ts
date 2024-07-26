@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgClass } from '@angular/common';
+import { LanguageService } from '../language.service';
+import { translations, TranslationKey } from '../translations';
 
 @Component({
   selector: 'app-contact',
@@ -14,6 +16,17 @@ import { NgClass } from '@angular/common';
 export class ContactComponent {
   http = inject(HttpClient);
   router = inject(Router);
+  currentLanguage: TranslationKey = 'en';
+  texts = translations[this.currentLanguage];
+
+  constructor(private languageService: LanguageService) {
+    this.languageService.language$.subscribe((lang) => {
+      if (lang in translations) {
+        this.currentLanguage = lang as TranslationKey;
+        this.texts = translations[this.currentLanguage];
+      }
+    });
+  }
 
   contactData = {
     name: '',
@@ -25,10 +38,10 @@ export class ContactComponent {
   privacyTouched = false;
   isPrivacyHovered = false;
 
-  mailTest = false; // Setze mailTest auf false, um POST-Anfrage zu aktivieren
+  mailTest = false;
 
   post = {
-    endPoint: 'https://klein-patrick.ch/sendmail.php', //muss noch geändert werden
+    endPoint: 'https://klein-patrick.ch/sendmail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -49,8 +62,8 @@ export class ContactComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
-            this.contactData.privacy = false; // Reset privacy checkbox
-            this.privacyTouched = false; // Reset privacyTouched
+            this.contactData.privacy = false;
+            this.privacyTouched = false;
           },
           error: (error) => {
             console.error(error);
@@ -67,7 +80,6 @@ export class ContactComponent {
   }
 
   togglePrivacy(event: Event) {
-    // Verhindere, dass das Click-Event auf das Eltern-Element ausgedehnt wird, falls es vom Link stammt
     if (event.target instanceof HTMLAnchorElement) {
       return;
     }
@@ -93,6 +105,8 @@ export class ContactComponent {
 
   navigatePolicy(event: Event) {
     event.stopPropagation();
-    window.open('/policy', '_blank');
+    this.router.navigate(['/policy'], {
+      queryParams: { lang: this.currentLanguage },
+    });
   }
 }

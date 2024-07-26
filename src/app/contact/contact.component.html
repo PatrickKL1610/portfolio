@@ -1,23 +1,22 @@
 <section>
   <div class="wrapperContact">
     <div data-aos="fade-right" class="headline aos-init aos-animate">
-      <h1>Contact</h1>
+      <h1>{{ texts.CONTACT }}</h1>
       <img src="../../assets/img/greenLineContacts.png" />
     </div>
     <div class="middleSection">
       <div data-aos="fade-right" class="contactTextbox aos-init aos-animate">
         <div class="contactTextheadline">
-          <h2>Got a problem to solve?</h2>
+          <h2>{{ texts.PROPLEM_SOLVE }}</h2>
         </div>
         <div class="contactText">
           <span>
-            Contact me through this form, I am interested in hearing you,
-            knowing your ideas and contributing to your projects with my work.
+            {{ texts.CONTACT_ME }}
           </span>
           <span class="callToAction">
-            Need a Frontend developer?
+            {{ texts.NEED }}
             <br />
-            <b>Contact me!</b>
+            <b>{{ texts.CONTACT_TO_ME }}</b>
           </span>
         </div>
       </div>
@@ -35,7 +34,7 @@
               type="text"
               id="inputName"
               required
-              placeholder="Your name"
+              placeholder="{{ texts.NAME_PLACEHOLDER }}"
               [(ngModel)]="contactData.name"
               #name="ngModel"
               (blur)="name.control.markAsTouched()"
@@ -54,7 +53,7 @@
             />
           </div>
           <span [class.d-none]="!name.invalid || !name.touched" id="errorName">
-            Your name is required
+            {{ texts.NAME_ERROR }}
           </span>
         </div>
         <div class="inputGab">
@@ -65,7 +64,7 @@
               id="inputMail"
               required
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-              placeholder="Your Email"
+              placeholder="{{ texts.EMAIL_PLACEHOLDER }}"
               [(ngModel)]="contactData.email"
               #email="ngModel"
               (blur)="email.control.markAsTouched()"
@@ -87,7 +86,7 @@
             [class.d-none]="!email.invalid || !email.touched"
             id="errorMail"
           >
-            Your email is required (e.g. yourname&#64;domain.com)
+            {{ texts.EMAIL_ERROR }}
           </span>
         </div>
         <div class="inputGab">
@@ -97,7 +96,7 @@
               minlength="4"
               id="inputText"
               required
-              placeholder="Your Message"
+              placeholder="{{ texts.MESSAGE_PLACEHOLDER }}"
               [(ngModel)]="contactData.message"
               #message="ngModel"
               (blur)="message.control.markAsTouched()"
@@ -119,7 +118,7 @@
             [class.d-none]="!message.invalid || !message.touched"
             id="errorText"
           >
-            Your message is empty or has fewer than 4 letters
+            {{ texts.MESSAGE_ERROR }}
           </span>
         </div>
         <div class="inputGab">
@@ -131,14 +130,14 @@
               (mouseout)="onPrivacyHover(false)"
             />
             <span>
-              I've read the
+              {{ texts.PRIVACY_1 }}
               <a
                 routerLink="/policy"
                 routerLinkActive="active"
                 (click)="navigatePolicy($event)"
-                >privacy policy</a
+                >{{ texts.PRIVACY_2 }}</a
               >
-              and agree to the processing of my data as outlined.
+              {{ texts.PRIVACY_3 }}
             </span>
           </div>
 
@@ -146,7 +145,7 @@
             [class.d-none]="contactData.privacy || !privacyTouched"
             id="errorPrivacy"
           >
-            Please accept the privacy policy.
+            {{ texts.PRIVACY_ERROR }}
           </span>
         </div>
         <div>
@@ -163,7 +162,7 @@
                 contactForm.valid && contactForm.dirty && contactData.privacy
             }"
           >
-            Send
+            {{ texts.SEND }}
           </button>
         </div>
       </form>
