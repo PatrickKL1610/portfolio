@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { LanguageService } from '../language.service';
 import { translations, TranslationKey } from '../translations';
 import { FooterComponent } from '../footer/footer.component';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-policy',
@@ -15,10 +16,12 @@ import { FooterComponent } from '../footer/footer.component';
 export class PolicyComponent implements OnInit {
   currentLanguage: TranslationKey = 'en';
   texts = translations[this.currentLanguage];
+  safePrivacyPolicyHtml: SafeHtml = '';
 
   constructor(
     private route: ActivatedRoute,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit() {
@@ -35,10 +38,9 @@ export class PolicyComponent implements OnInit {
           }
         });
       }
+      this.safePrivacyPolicyHtml = this.sanitizer.bypassSecurityTrustHtml(
+        this.texts.PRIVACY_POLICY
+      );
     });
-  }
-
-  get privacyPolicyHtml() {
-    return this.texts.PRIVACY_POLICY;
   }
 }

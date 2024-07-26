@@ -3,23 +3,27 @@ import { LanguageService } from '../language.service';
 import { translations, TranslationKey } from '../translations';
 import { FooterComponent } from '../footer/footer.component';
 import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-imprint',
   standalone: true,
   imports: [FooterComponent],
   templateUrl: './imprint.component.html',
-  styleUrl: './imprint.component.scss',
+  styleUrls: ['./imprint.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class ImprintComponent implements OnInit {
   currentLanguage: TranslationKey = 'en';
   texts = translations[this.currentLanguage];
+  safeImprintHtml: SafeHtml = '';
 
   constructor(
     private route: ActivatedRoute,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private sanitizer: DomSanitizer
   ) {}
+
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
       const lang = params['lang'];
@@ -34,10 +38,9 @@ export class ImprintComponent implements OnInit {
           }
         });
       }
+      this.safeImprintHtml = this.sanitizer.bypassSecurityTrustHtml(
+        this.texts.IMPRINT_TEXT
+      );
     });
-  }
-
-  get imprintHtml() {
-    return this.texts.IMPRINT_TEXT;
   }
 }

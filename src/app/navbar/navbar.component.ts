@@ -8,6 +8,7 @@ import {
 import { Router, NavigationEnd } from '@angular/router';
 import { LanguageService } from '../language.service';
 import { translations, TranslationKey } from '../translations';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -31,7 +32,8 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   constructor(
     private el: ElementRef,
     private router: Router,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private cdRef: ChangeDetectorRef
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -54,6 +56,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.initializeSections();
     this.updateActiveSection();
+    this.cdRef.detectChanges();
   }
 
   initializeSections() {
