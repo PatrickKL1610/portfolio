@@ -21,16 +21,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   activeSection = 'start';
   currentLanguage: TranslationKey = 'en';
   texts = translations[this.currentLanguage];
-
-  switchLanguage(event: any) {
-    const selectedLanguage = event.target.value;
-    this.languageService.setLanguage(selectedLanguage);
-  }
-
-  stopPropagation(event: Event) {
-    event.stopPropagation();
-  }
-
+  private currentUrl?: string;
   private sections: { id: string; offset: number }[] = [];
 
   constructor(
@@ -41,6 +32,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
+        this.currentUrl = event.url;
         this.isBurgerMenuVisible = false;
         this.updateActiveSection();
       }
@@ -85,14 +77,6 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     ];
   }
 
-  handleIntersect(entries: IntersectionObserverEntry[]) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        this.activeSection = entry.target.id;
-      }
-    });
-  }
-
   toggleBurgerMenu(event: Event) {
     this.isBurgerMenuVisible = !this.isBurgerMenuVisible;
     event.stopPropagation();
@@ -107,18 +91,36 @@ export class NavbarComponent implements OnInit, AfterViewInit {
 
   scrollToSection(event: Event, sectionId: string) {
     event.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    this.router.navigate(['/']).then(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  switchLanguage(event: any) {
+    const selectedLanguage = event.target.value;
+    this.languageService.setLanguage(selectedLanguage);
+  }
+
+  stopPropagation(event: Event) {
+    event.stopPropagation();
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.updateActiveSection();
+    if (this.requiresScrollCheck()) {
+      this.updateActiveSection();
+    }
   }
 
   updateActiveSection() {
+    if (!this.requiresScrollCheck()) {
+      this.activeSection = '';
+      return;
+    }
+
     const scrollPosition =
       window.pageYOffset || document.documentElement.scrollTop;
 
@@ -141,5 +143,11 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     if (this.isBurgerMenuVisible && !this.el.nativeElement.contains(target)) {
       this.isBurgerMenuVisible = false;
     }
+  }
+
+  requiresScrollCheck(): boolean {
+    return (
+      this.currentUrl === '/' || this.currentUrl?.startsWith('/#') || false
+    );
   }
 }

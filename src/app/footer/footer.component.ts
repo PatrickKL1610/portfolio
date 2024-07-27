@@ -8,7 +8,7 @@ import { translations, TranslationKey } from '../translations';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss',
+  styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
   currentLanguage: TranslationKey = 'en';

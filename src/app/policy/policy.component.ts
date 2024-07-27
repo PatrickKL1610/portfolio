@@ -26,22 +26,25 @@ export class PolicyComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.languageService.language$.subscribe((lang) => {
+      if (lang in translations) {
+        this.currentLanguage = lang as TranslationKey;
+        this.texts = translations[this.currentLanguage];
+        this.updatePrivacyPolicyHtml();
+      }
+    });
+
     this.route.queryParams.subscribe((params) => {
       const lang = params['lang'];
       if (lang && lang in translations) {
-        this.currentLanguage = lang as TranslationKey;
-        this.texts = translations[this.currentLanguage];
-      } else {
-        this.languageService.language$.subscribe((lang) => {
-          if (lang in translations) {
-            this.currentLanguage = lang as TranslationKey;
-            this.texts = translations[this.currentLanguage];
-          }
-        });
+        this.languageService.setLanguage(lang);
       }
-      this.safePrivacyPolicyHtml = this.sanitizer.bypassSecurityTrustHtml(
-        this.texts.PRIVACY_POLICY
-      );
     });
+  }
+
+  updatePrivacyPolicyHtml() {
+    this.safePrivacyPolicyHtml = this.sanitizer.bypassSecurityTrustHtml(
+      this.texts.PRIVACY_POLICY
+    );
   }
 }
