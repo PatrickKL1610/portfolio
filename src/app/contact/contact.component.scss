@@ -244,6 +244,7 @@ form button {
   height: 58px;
   padding: 15px 30px;
   border-radius: 10px;
+  border: none;
   gap: 10px;
   color: $white;
   font-family: Poppins;
@@ -252,8 +253,6 @@ form button {
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
-  box-shadow: 4px 4px 4px $shadowdark;
-  border: none;
 }
 .disabledButton {
   display: flex;
@@ -274,7 +273,6 @@ form button {
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
-  box-shadow: 4px 4px 4px $shadowdark;
   border: none;
 }
 .enabledButton {
@@ -294,7 +292,6 @@ form button {
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
-  box-shadow: 4px 4px 4px $shadowdark;
   border: none;
   background-color: $specgreen;
   cursor: pointer;

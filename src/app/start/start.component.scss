@@ -124,9 +124,9 @@ button {
   height: 58px;
   border-radius: 10px;
   border-color: $specgreen;
+  border: none;
   gap: 10px;
   background: $specgreen;
-  box-shadow: 4px 4px 4px $shadowdark;
   cursor: pointer;
   color: $white;
   font-family: Poppins;
