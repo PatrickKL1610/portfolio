@@ -30,7 +30,7 @@ import { filter } from 'rxjs/operators';
   ],
 })
 export class AppComponent {
-  title = 'Portfolio';
+  title = 'Partick Klein';
   isLandscapeOnMobile: boolean = false;
 
   constructor(private router: Router, private renderer: Renderer2) {
