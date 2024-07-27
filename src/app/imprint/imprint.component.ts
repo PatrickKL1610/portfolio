@@ -4,11 +4,12 @@ import { translations, TranslationKey } from '../translations';
 import { FooterComponent } from '../footer/footer.component';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [FooterComponent],
+  imports: [FooterComponent, NavbarComponent],
   templateUrl: './imprint.component.html',
   styleUrls: ['./imprint.component.scss'],
   encapsulation: ViewEncapsulation.None,

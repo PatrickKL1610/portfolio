@@ -18,12 +18,14 @@ export class ContactComponent {
   router = inject(Router);
   currentLanguage: TranslationKey = 'en';
   texts = translations[this.currentLanguage];
+  buttonText: string = this.texts.SEND;
 
   constructor(private languageService: LanguageService) {
     this.languageService.language$.subscribe((lang) => {
       if (lang in translations) {
         this.currentLanguage = lang as TranslationKey;
         this.texts = translations[this.currentLanguage];
+        this.buttonText = this.texts.SEND;
       }
     });
   }
@@ -64,6 +66,7 @@ export class ContactComponent {
             ngForm.resetForm();
             this.contactData.privacy = false;
             this.privacyTouched = false;
+            this.changeButtonText();
           },
           error: (error) => {
             console.error(error);
@@ -71,6 +74,13 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     }
+  }
+
+  changeButtonText() {
+    this.buttonText = this.texts.SENT;
+    setTimeout(() => {
+      this.buttonText = this.texts.SEND;
+    }, 5000);
   }
 
   validateField(field: any) {

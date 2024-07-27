@@ -4,11 +4,12 @@ import { LanguageService } from '../language.service';
 import { translations, TranslationKey } from '../translations';
 import { FooterComponent } from '../footer/footer.component';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-policy',
   standalone: true,
-  imports: [FooterComponent],
+  imports: [FooterComponent, NavbarComponent],
   templateUrl: './policy.component.html',
   styleUrls: ['./policy.component.scss'],
   encapsulation: ViewEncapsulation.None,
