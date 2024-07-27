@@ -321,31 +321,28 @@ form button {
   height: 700px;
   width: 600px;
 }
-.bottomSection .topArrow {
-  cursor: pointer;
-  display: flex;
+
+.buttonup {
   position: relative;
-  top: 0;
-  left: 530px;
-  z-index: 2;
-  width: 39px;
-  height: 39px;
-  padding: 8px 8px 7px 7px;
-  border-radius: 41px;
-  border: 2px;
+  bottom: -700px;
+  right: 20px;
+  z-index: 10000000;
 }
-.bottomSection .topArrowGreen {
+
+.topArrow {
   cursor: pointer;
-  display: flex;
-  position: relative;
-  top: 0;
-  left: 530px;
-  z-index: 1;
-  width: 39px;
-  height: 39px;
-  padding: 8px 8px 7px 7px;
-  border-radius: 41px;
-  border: 2px;
+  width: 50px;
+  height: 50px;
+}
+
+.topArrow img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.topArrow:hover img {
+  transform: scale(1.2);
 }
 
 @media (max-width: 2350px) {

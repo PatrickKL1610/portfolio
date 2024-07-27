@@ -119,4 +119,8 @@ export class ContactComponent {
       queryParams: { lang: this.currentLanguage },
     });
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

@@ -60,7 +60,7 @@ export const translations: Record<TranslationKey, TranslationData> = {
     PRIVACY_ERROR: `Please accept the privacy policy.`,
     SEND: `Send`,
     IMPRINT: `Imprint`,
-    SENT: `Send, Thank you`,
+    SENT: `Sended...`,
     IMPRINT_TEXT: `<div class="wrapperLegal">
     <div class="legal">
       <b>Responsible entity:</b><br />Patrick Klein<br />Im Hanfland 5G<br />8493
@@ -652,7 +652,7 @@ export const translations: Record<TranslationKey, TranslationData> = {
     PRIVACY_ERROR: `Bitte akzeptieren Sie die Datenschutzrichtlinie.`,
     SEND: `Senden`,
     IMPRINT: `Impressum`,
-    SENT: `Gesendet, Danke`,
+    SENT: `Gesendet...`,
     IMPRINT_TEXT: `<div class="wrapperLegal">
     <div class="legal">
       <b>Verantwortliche Stelle:</b><br />Patrick Klein<br />Im Hanfland 5G<br />8493
