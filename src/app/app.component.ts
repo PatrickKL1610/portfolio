@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -16,7 +16,7 @@ import { filter } from 'rxjs/operators';
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss'],
   imports: [
     CommonModule,
     RouterOutlet,
@@ -31,12 +31,36 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'Portfolio';
-  constructor(private router: Router) {
+  isLandscapeOnMobile: boolean = false;
+
+  constructor(private router: Router, private renderer: Renderer2) {
     AOS.init();
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
         window.scrollTo(0, 0);
       });
+    this.checkOrientation();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkOrientation();
+  }
+
+  checkOrientation() {
+    const userAgent = navigator.userAgent || navigator.vendor;
+    const isMobile =
+      /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
+        userAgent.toLowerCase()
+      );
+    this.isLandscapeOnMobile =
+      isMobile && window.innerWidth > window.innerHeight;
+
+    if (this.isLandscapeOnMobile) {
+      this.renderer.setStyle(document.body, 'overflow', 'hidden');
+    } else {
+      this.renderer.removeStyle(document.body, 'overflow');
+    }
   }
 }
