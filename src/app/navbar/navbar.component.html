@@ -15,7 +15,7 @@
     <div>
       <div class="headerlinks">
         <div class="select-container">
-          <select (change)="switchLanguage($event)">
+          <select (change)="switchLanguage($event)" [value]="currentLanguage">
             <option value="en">Englisch 🇬🇧</option>
             <option value="de">Deutsch 🇩🇪</option>
           </select>
@@ -95,6 +95,7 @@
       <div class="select-container">
         <select
           (change)="switchLanguage($event)"
+          [value]="currentLanguage"
           (click)="stopPropagation($event)"
         >
           <option value="en">Englisch 🇬🇧</option>

@@ -4,6 +4,7 @@ import {
   HostListener,
   OnInit,
   AfterViewInit,
+  NgZone,
 } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { LanguageService } from '../language.service';
@@ -21,14 +22,15 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   activeSection = 'start';
   currentLanguage: TranslationKey = 'en';
   texts = translations[this.currentLanguage];
-  private currentUrl?: string;
+  private currentUrl: string = '';
   private sections: { id: string; offset: number }[] = [];
 
   constructor(
     private el: ElementRef,
     private router: Router,
     private languageService: LanguageService,
-    private cdRef: ChangeDetectorRef
+    private cdRef: ChangeDetectorRef,
+    private ngZone: NgZone
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -38,10 +40,13 @@ export class NavbarComponent implements OnInit, AfterViewInit {
       }
     });
     this.languageService.language$.subscribe((lang) => {
-      if (lang in translations) {
-        this.currentLanguage = lang as TranslationKey;
-        this.texts = translations[this.currentLanguage];
-      }
+      this.ngZone.run(() => {
+        if (lang in translations) {
+          this.currentLanguage = lang as TranslationKey;
+          this.texts = translations[this.currentLanguage];
+          this.cdRef.markForCheck();
+        }
+      });
     });
   }
 
@@ -146,8 +151,6 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
   requiresScrollCheck(): boolean {
-    return (
-      this.currentUrl === '/' || this.currentUrl?.startsWith('/#') || false
-    );
+    return this.currentUrl === '/' || this.currentUrl.startsWith('/#');
   }
 }
