@@ -1,11 +1,10 @@
 <section id="start">
-  <img class="green_line" src="../../assets/img/green_line.png" />
   <div class="startwrapper">
     <div class="headlinebox">
       <div class="horizontal">
         <img class="purple_shadow" src="../../assets/img/Purple shadow 1.png" />
         <div class="namebox">
-          <span class="iam"> I am</span>
+          <span class="iam">I am</span>
           <div class="namediv">
             <span id="name">Patrick Klein</span>
             <span id="title">FRONTEND DEVELOPER</span>
@@ -16,9 +15,10 @@
     </div>
     <div class="letstalk">
       <a routerLink="/contact" (click)="scrollToSection($event, 'mycontact')">
-        <button>Let's talk!</button>
+        <button>{{ texts.TALK }}</button>
       </a>
     </div>
+    <img class="green_line" src="../../assets/img/green_line.png" />
     <div id="myaboutme" class="sociallinks">
       <a target="_blank" href="https://github.com/PatrickKL1610">
         <img id="github-button" src="../../assets/img/github_button.png" />
@@ -34,7 +34,7 @@
       </a>
     </div>
     <div class="scrolldown">
-      <span> Scroll down </span>
+      <span>{{ texts.SCROLL }}</span>
     </div>
   </div>
 </section>

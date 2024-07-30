@@ -27,6 +27,11 @@ app-skills {
   top: -180px;
 }
 
+app-navbar {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 1400px) {
   app-skills {
     top: -150px;

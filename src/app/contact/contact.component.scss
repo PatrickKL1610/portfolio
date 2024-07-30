@@ -2,10 +2,10 @@
 
 section {
   height: 850px;
-  display: flex;
-  justify-content: center;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 .wrapperContact {
   display: flex;
@@ -301,26 +301,6 @@ form button {
   border-color: $specpurple !important;
   transform: scale(1.2);
 }
-.borderGreen {
-  border: 1px solid $specgreen !important;
-}
-.borderRed {
-  border: 1px solid $red !important;
-}
-.bottomSection {
-  display: flex;
-  justify-content: flex-end;
-  width: auto;
-  height: 100px;
-}
-.bottomSection .purpleShadow {
-  position: relative;
-  top: -350px;
-  right: 0;
-  z-index: -1;
-  height: 700px;
-  width: 600px;
-}
 
 .buttonup {
   position: relative;
@@ -452,10 +432,11 @@ form button {
     position: relative;
     left: -120px;
   }
-  .bottomSection .topArrow,
-  .bottomSection .topArrowGreen {
-    left: 550px;
+
+  .buttonup {
+    bottom: -750px;
   }
+
   .contactTextbox {
     position: relative;
   }
@@ -475,6 +456,9 @@ form button {
   form {
     position: relative;
     right: 95px;
+  }
+  .buttonup {
+    bottom: -850px;
   }
   form input,
   form textarea {
@@ -506,6 +490,7 @@ form button {
     bottom: 0;
     top: 100px;
     height: 1100px;
+    display: block;
   }
   .headline h1 {
     gap: 10px;
@@ -535,10 +520,7 @@ form button {
   .bottomSection {
     top: 0;
   }
-  .bottomSection .topArrow,
-  .bottomSection .topArrowGreen {
-    left: 500px;
-  }
+
   .contactTextbox {
     position: relative;
     left: 10px;
@@ -675,6 +657,9 @@ form button {
   form .privacy {
     width: 340px;
     left: 0;
+  }
+  .buttonup {
+    bottom: -900px;
   }
   form button,
   .disabledButton {

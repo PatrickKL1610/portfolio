@@ -1,11 +1,11 @@
 @import "../../assets/colors.scss";
 
 .header {
+  max-width: 1920px;
   width: 100%;
   height: 100px;
   display: flex;
   position: fixed;
-  justify-content: center;
   align-items: center;
   z-index: 999;
   padding: 24px 50px;
@@ -162,6 +162,10 @@ select:focus {
 @media (max-width: 1130px) {
   .burger {
     display: flex !important;
+    img {
+      width: 25px;
+      height: 25px;
+    }
   }
   .headerlinks {
     display: none !important;

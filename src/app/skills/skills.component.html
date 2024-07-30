@@ -5,12 +5,12 @@
   src="../../assets/img/line_blue.png"
 />
 <section>
-  <div class="mobileButton d-none">
-    <a routerLink="/contact" (click)="scrollToSection($event, 'mycontact')">
-      <button id="myPortfolio">Contact</button>
-    </a>
-  </div>
   <div class="skillswrapper">
+    <div class="mobile-button">
+      <a routerLink="/contact" (click)="scrollToSection($event, 'mycontact')">
+        <button>{{ texts.CONTACT }}</button>
+      </a>
+    </div>
     <div class="iconcontainer">
       <div
         data-aos="fade-right"
@@ -95,7 +95,11 @@
       <span>
         {{ texts.EXPERIENCE }}
       </span>
-      <a routerLink="/contact" (click)="scrollToSection($event, 'mycontact')">
+      <a
+        class="buttonSkills"
+        routerLink="/contact"
+        (click)="scrollToSection($event, 'mycontact')"
+      >
         <button>{{ texts.CONTACT }}</button>
       </a>
     </div>

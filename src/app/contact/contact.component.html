@@ -171,8 +171,13 @@
     </div>
   </div>
   <div class="buttonup">
-    <div class="topArrow" (click)="scrollToTop()">
-      <img src="../../assets/img/up-arrow.png" alt="Back to top" />
+    <div
+      class="topArrow"
+      (mouseover)="onArrowHover(true)"
+      (mouseout)="onArrowHover(false)"
+      (click)="scrollToTop()"
+    >
+      <img [src]="arrowImageSrc" alt="Back to top" />
     </div>
   </div>
 </section>

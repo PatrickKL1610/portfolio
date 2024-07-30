@@ -20,6 +20,10 @@ export class ContactComponent {
   texts = translations[this.currentLanguage];
   buttonText: string = this.texts.SEND;
 
+  arrowImageSrc: string = '../../assets/img/up-arrow.png';
+  arrowDefaultSrc: string = '../../assets/img/up-arrow.png';
+  arrowHoverSrc: string = '../../assets/img/up-arrow-hover.png';
+
   constructor(private languageService: LanguageService) {
     this.languageService.language$.subscribe((lang) => {
       if (lang in translations) {
@@ -122,5 +126,9 @@ export class ContactComponent {
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  onArrowHover(isHovered: boolean) {
+    this.arrowImageSrc = isHovered ? this.arrowHoverSrc : this.arrowDefaultSrc;
   }
 }

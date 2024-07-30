@@ -30,6 +30,8 @@ export interface TranslationData {
   IMPRINT: string;
   IMPRINT_TEXT: string;
   SENT: string;
+  TALK: string;
+  SCROLL: string;
 }
 
 export const translations: Record<TranslationKey, TranslationData> = {
@@ -61,6 +63,8 @@ export const translations: Record<TranslationKey, TranslationData> = {
     SEND: `Send`,
     IMPRINT: `Imprint`,
     SENT: `Sended...`,
+    TALK: `Let's Talk`,
+    SCROLL: `Scroll down`,
     IMPRINT_TEXT: `<div class="wrapperLegal">
     <div class="legal">
       <b>Responsible entity:</b><br />Patrick Klein<br />Im Hanfland 5G<br />8493
@@ -653,6 +657,8 @@ export const translations: Record<TranslationKey, TranslationData> = {
     SEND: `Senden`,
     IMPRINT: `Impressum`,
     SENT: `Gesendet...`,
+    TALK: `Schreib mir`,
+    SCROLL: `Nach unten scrollen`,
     IMPRINT_TEXT: `<div class="wrapperLegal">
     <div class="legal">
       <b>Verantwortliche Stelle:</b><br />Patrick Klein<br />Im Hanfland 5G<br />8493

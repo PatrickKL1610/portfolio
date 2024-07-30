@@ -40,27 +40,5 @@ export class AppComponent {
       .subscribe(() => {
         window.scrollTo(0, 0);
       });
-    this.checkOrientation();
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
-    this.checkOrientation();
-  }
-
-  checkOrientation() {
-    const userAgent = navigator.userAgent || navigator.vendor;
-    const isMobile =
-      /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(
-        userAgent.toLowerCase()
-      );
-    this.isLandscapeOnMobile =
-      isMobile && window.innerWidth > window.innerHeight;
-
-    if (this.isLandscapeOnMobile) {
-      this.renderer.setStyle(document.body, 'overflow', 'hidden');
-    } else {
-      this.renderer.removeStyle(document.body, 'overflow');
-    }
   }
 }
