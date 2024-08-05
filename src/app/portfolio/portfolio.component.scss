@@ -27,7 +27,7 @@ section {
   width: 0px;
   height: 210px;
   position: relative;
-  left: -20px;
+  left: 50px;
 }
 .headlinecontainer span {
   width: 470px;
@@ -63,7 +63,8 @@ section {
   gap: 10px;
   z-index: 1;
   background-color: $darkblueBG;
-  margin-left: 60px;
+  margin-left: 30px;
+  padding-left: 30px;
 }
 .headline img {
   width: 50px;
@@ -218,7 +219,7 @@ app-project {
     height: 2000px;
   }
   .anchorpointcontact {
-    top: 1950px;
+    top: 2150px;
   }
   .purpleline {
     top: 104px;
@@ -298,7 +299,7 @@ app-project {
     height: 1400px;
   }
   .anchorpointcontact {
-    top: 1350px;
+    top: 1600px;
   }
   .portfoliocontainer {
     top: 200px;
@@ -367,7 +368,7 @@ app-project {
     height: 1200px;
   }
   .anchorpointcontact {
-    top: 1150px;
+    top: 1400px;
   }
   app-project {
     margin-bottom: 50px;

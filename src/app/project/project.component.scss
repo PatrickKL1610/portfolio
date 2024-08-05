@@ -103,9 +103,11 @@ span {
 .testButton:hover {
   background-color: $specgreen;
   border-color: $specgreen;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .gitButton:hover {
   background-color: $speclightblue;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .liveTest {
   position: absolute;

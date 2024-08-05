@@ -24,6 +24,8 @@ export class ContactComponent {
   arrowDefaultSrc: string = '../../assets/img/up-arrow.png';
   arrowHoverSrc: string = '../../assets/img/up-arrow-hover.png';
 
+  buttonChanged: boolean = false;
+
   constructor(private languageService: LanguageService) {
     this.languageService.language$.subscribe((lang) => {
       if (lang in translations) {
@@ -82,8 +84,10 @@ export class ContactComponent {
 
   changeButtonText() {
     this.buttonText = this.texts.SENT;
+    this.buttonChanged = true;
     setTimeout(() => {
       this.buttonText = this.texts.SEND;
+      this.buttonChanged = false;
     }, 5000);
   }
 

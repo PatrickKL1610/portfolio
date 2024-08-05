@@ -161,7 +161,8 @@
                 !contactForm.dirty ||
                 !contactData.privacy,
               enabledButton:
-                contactForm.valid && contactForm.dirty && contactData.privacy
+                contactForm.valid && contactForm.dirty && contactData.privacy,
+              changed: buttonChanged
             }"
           >
             {{ buttonText }}

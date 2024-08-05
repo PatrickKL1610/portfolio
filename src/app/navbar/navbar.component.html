@@ -1,58 +1,60 @@
 <header class="header">
-  <div class="navbar-container">
-    <div class="logo">
-      <a routerLink="/" (click)="scrollToSection($event, 'start')">
-        <span>P</span>
-        <span>a</span>
-        <span>t</span>
-        <span>r</span>
-        <span class="i-styling">i</span>
-        <span>c</span>
-        <span class="k-styling">k</span>
-      </a>
-    </div>
-
-    <div>
-      <div class="headerlinks">
-        <div class="select-container">
-          <select (change)="switchLanguage($event)" [value]="currentLanguage">
-            <option value="en">Englisch 🇬🇧</option>
-            <option value="de">Deutsch 🇩🇪</option>
-          </select>
-        </div>
-        <a
-          routerLink="/"
-          [class.active]="activeSection === 'start'"
-          (click)="scrollToSection($event, 'start')"
-          >Home</a
-        >
-        <a
-          routerLink="/aboutme"
-          [class.active]="activeSection === 'aboutme'"
-          (click)="scrollToSection($event, 'aboutme')"
-          >{{ texts.ABOUT_ME }}</a
-        >
-        <a
-          routerLink="/skills"
-          [class.active]="activeSection === 'myskills'"
-          (click)="scrollToSection($event, 'myskills')"
-          >Skills</a
-        >
-        <a
-          routerLink="/portfolio"
-          [class.active]="activeSection === 'myportfolio'"
-          (click)="scrollToSection($event, 'myportfolio')"
-          >Portfolio</a
-        >
-        <a
-          routerLink="/contact"
-          [class.active]="activeSection === 'mycontact'"
-          (click)="scrollToSection($event, 'mycontact')"
-          >{{ texts.CONTACT }}</a
-        >
+  <div class="navbarContainer">
+    <div class="innernavbar-container">
+      <div class="logo">
+        <a routerLink="/" (click)="scrollToSection($event, 'start')">
+          <span>P</span>
+          <span>a</span>
+          <span>t</span>
+          <span>r</span>
+          <span class="i-styling">i</span>
+          <span>c</span>
+          <span class="k-styling">k</span>
+        </a>
       </div>
-      <div class="burger" (click)="toggleBurgerMenu($event)">
-        <img src="../../assets/img/burger_menu.png" />
+
+      <div>
+        <div class="headerlinks">
+          <div class="select-container">
+            <select (change)="switchLanguage($event)" [value]="currentLanguage">
+              <option value="en">Englisch 🇬🇧</option>
+              <option value="de">Deutsch 🇩🇪</option>
+            </select>
+          </div>
+          <a
+            routerLink="/"
+            [class.active]="activeSection === 'start'"
+            (click)="scrollToSection($event, 'start')"
+            >Home</a
+          >
+          <a
+            routerLink="/aboutme"
+            [class.active]="activeSection === 'aboutme'"
+            (click)="scrollToSection($event, 'aboutme')"
+            >{{ texts.ABOUT_ME }}</a
+          >
+          <a
+            routerLink="/skills"
+            [class.active]="activeSection === 'myskills'"
+            (click)="scrollToSection($event, 'myskills')"
+            >Skills</a
+          >
+          <a
+            routerLink="/portfolio"
+            [class.active]="activeSection === 'myportfolio'"
+            (click)="scrollToSection($event, 'myportfolio')"
+            >Portfolio</a
+          >
+          <a
+            routerLink="/contact"
+            [class.active]="activeSection === 'mycontact'"
+            (click)="scrollToSection($event, 'mycontact')"
+            >{{ texts.CONTACT }}</a
+          >
+        </div>
+        <div class="burger" (click)="toggleBurgerMenu($event)">
+          <img src="../../assets/img/burger_menu.png" />
+        </div>
       </div>
     </div>
   </div>
