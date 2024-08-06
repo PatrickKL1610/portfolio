@@ -159,6 +159,7 @@ form .inputBox .imgPositioning {
   width: 25px;
   padding-right: 16px;
 }
+
 form input {
   display: flex;
   width: 617px;
@@ -258,44 +259,10 @@ form button {
   background-color: $sendgreen !important;
 }
 .disabledButton {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-left: 200px;
-  width: 253px;
-  height: 58px;
-  padding: 15px 30px;
-  border-radius: 10px;
-  gap: 10px;
   cursor: not-allowed;
   background-color: $grey;
-  color: $white;
-  font-family: Poppins;
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 0em;
-  text-align: left;
-  border: none;
 }
 .enabledButton {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-left: 200px;
-  width: 253px;
-  height: 58px;
-  padding: 15px 30px;
-  border-radius: 10px;
-  gap: 10px;
-  color: $white;
-  font-family: Poppins;
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 0em;
-  text-align: left;
-  border: none;
   background-color: $specgreen;
   cursor: pointer;
 }
@@ -372,7 +339,12 @@ form button {
   }
   .disabledButton {
     position: relative;
-    top: 0;
+    top: 10px;
+    left: -90px;
+  }
+  .enabledButton {
+    position: relative;
+    top: 10px;
     left: -90px;
   }
   .middleSection {
@@ -492,8 +464,7 @@ form button {
   section {
     position: relative;
     bottom: 0;
-    top: 100px;
-    height: 1100px;
+    height: 950px;
     display: block;
   }
   .headline h1 {
@@ -649,9 +620,6 @@ form button {
   }
 }
 @media (max-width: 500px) {
-  section {
-    height: 1100px;
-  }
   form {
     left: 100px;
   }
@@ -679,9 +647,6 @@ form button {
   }
 }
 @media (max-width: 450px) {
-  section {
-    height: 1150px;
-  }
   .contactTextbox {
     left: 85px;
   }

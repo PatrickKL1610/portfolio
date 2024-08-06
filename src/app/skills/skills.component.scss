@@ -366,9 +366,6 @@ button:hover {
   .iconcontainer {
     gap: 5px;
   }
-  button {
-    left: 110px;
-  }
 }
 @media (max-width: 350px) {
   .skills span {
@@ -383,8 +380,5 @@ button:hover {
   }
   .iconcontainer {
     gap: 0;
-  }
-  button {
-    left: 90px;
   }
 }

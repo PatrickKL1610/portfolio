@@ -41,6 +41,7 @@ section {
   gap: 6px;
   transform: scale(0.95);
   position: relative;
+  left: 50px;
   span {
     font-family: Poppins;
     font-weight: 400;
@@ -234,7 +235,8 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 6px;
-    transform: scale(1);
+    transform: scale(0.45);
+    left: unset;
   }
 
   .scrolldown {
@@ -255,9 +257,6 @@ button:hover {
     transform: scale(1);
     rotate: 0deg;
     height: 350px;
-  }
-  .horizontal {
-    transform: scale(0.45);
   }
 
   .sociallinks {
