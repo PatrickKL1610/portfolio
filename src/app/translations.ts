@@ -38,7 +38,7 @@ export const translations: Record<TranslationKey, TranslationData> = {
   en: {
     ABOUT_ME: `About me`,
     HELLO: `Hello! My name is Patrick Klein, and I'm a frontend developer from Zurich, Switzerland. I've always been fascinated by technological innovations. Now, I'm eager to incorporate this passion into my professional life.`,
-    TEAMWORK: `Teamwork and communication are just as important to me as technology Excellence. As part of agile project teams, I learned how important it is to have open, Transparent communication, which is essential for project success!`,
+    TEAMWORK: `Teamwork and communication are just as important to me as technology excellence. As part of agile project teams, I've learned how important it is to have open, transparent communication, which is essential for project success!`,
     LOOK_FORWARD: `I look forward to applying my knowledge and skills to new challenges to create innovative solutions. I look forward to meeting you!`,
     EXPERIENCE: `I have gained experience in building projects with various front end technologies and concepts.`,
     EXPLORE_WORK: `Explore a selection of my work here - Interact with projects to see my skills in action.`,
@@ -47,7 +47,7 @@ export const translations: Record<TranslationKey, TranslationData> = {
     POKEAPI_LIBRARY: `Based on the PokéAPI, a simple library that provides and catalogues Pokémon information.`,
     JUMP_RUN_GAME: `Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.`,
     PROPLEM_SOLVE: `Got a problem to solve?`,
-    CONTACT_ME: `Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.`,
+    CONTACT_ME: `Contact me through this form. I am interested in hearing you, knowing your ideas and contributing to your projects with my work.`,
     NEED: `Need a Frontend developer?`,
     CONTACT_TO_ME: `Contact me!`,
     NAME_PLACEHOLDER: `Your name`,
